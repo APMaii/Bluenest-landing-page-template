@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
@@ -494,7 +494,7 @@ a { text-decoration: none; color: inherit; }
 .hero-ctas {
   display: flex; align-items: center; gap: .75rem;
   flex-wrap: wrap; justify-content: center;
-  margin-bottom: 0;
+  margin-bottom: 1.25rem;
   animation: fadeUp .7s .2s ease both;
 }
 .btn-primary {
@@ -1972,7 +1972,7 @@ button.hero-wf-step {
 }
 </style>
 <script>
-(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();
+(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.setAttribute('data-theme','light');if(t!=='light'){localStorage.setItem('theme','light');}}}catch(e){document.documentElement.setAttribute('data-theme','light');}})();
 </script>
 </head>
 <body>
@@ -2345,9 +2345,7 @@ function HeroWorkflowInteractive() {
             <p className="hero-wf-intro-hint">
               Click <strong>Search</strong> in the preview to explore our robust platform — then watch a short walkthrough and open your live CMA.
             </p>
-            <button type="button" className="hero-wf-skip" onClick={startVideo}>
-              Skip · play walkthrough
-            </button>
+            
           </>
         )}
         {phase === 'video' && (
@@ -2436,14 +2434,6 @@ function Hero() {
           </a>
         </div>
 
-        <div className="hero-metrics-pills" style={{animation:'fadeUp .72s .22s ease both'}}>
-          {HERO_PILLS.map(({ k, lab }) => (
-            <div key={lab} className="hero-pill">
-              <strong>{k}</strong>
-              <span>· {lab}</span>
-            </div>
-          ))}
-        </div>
 
         <div className="hero-gif-wrap">
           <HeroWorkflowInteractive/>
