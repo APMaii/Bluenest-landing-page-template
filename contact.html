@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Contact — BlueNest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="subpages.css"/>
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}})();</script>
+<script defer src="subpages.js"></script>
+</head>
+<body>
+<div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+<nav class="nav solid nav--always-solid" id="nav">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="BlueNest" class="logo-img" width="160" height="40"/>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#features">Product</a>
+    <a href="index.html#who">Who it's for</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+  <div class="nav-right">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Theme">
+      <svg id="icon-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="#" class="btn-nav-ghost">Log in</a>
+    <a href="index.html#pricing" class="btn-nav-fill">Get started
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <button class="ham" type="button" id="nav-open" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-overlay" id="mob-overlay" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="index.html#features">Product</a>
+  <a href="index.html#who">Who it's for</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+  <button type="button" class="theme-toggle" id="theme-toggle-mob" aria-label="Toggle dark mode"><svg class="theme-mob-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  <button class="mob-close" type="button" id="nav-close">[ CLOSE ]</button>
+</div>
+
+<header class="contact-hero" id="contact-hero" aria-labelledby="contact-hero-title">
+  <div class="contact-hero__gradient" aria-hidden="true"></div>
+  <div class="contact-hero__grid" aria-hidden="true"></div>
+  <div class="contact-hero__noise" aria-hidden="true"></div>
+  <div class="contact-hero__glow" id="contact-hero-glow" aria-hidden="true"></div>
+  <div class="contact-hero__inner">
+    <p class="contact-hero__eyebrow">BlueNest · Contact &amp; locations</p>
+    <h1 class="contact-hero__title" id="contact-hero-title">Get in touch</h1>
+    <p class="contact-hero__lead">We are always ready to help you and answer your questions — from pilots and onboarding to technical deep-dives.</p>
+    <p class="contact-hero__support">Our team sits in Pacific time with coverage across North America. Whether you need a demo, a security review, or help with a file, we will route you to the right specialist.</p>
+  </div>
+</header>
+
+<div class="contact-divider" role="presentation" aria-hidden="true"></div>
+
+<section class="contact-kpi-section" data-reveal aria-label="Response and coverage">
+  <div class="contact-kpi-row">
+    <div class="contact-kpi">
+      <div class="contact-kpi__val">&lt; 24h</div>
+      <div class="contact-kpi__label">Typical first response on business days</div>
+    </div>
+    <div class="contact-kpi">
+      <div class="contact-kpi__val">Vancouver</div>
+      <div class="contact-kpi__label">Headquarters &amp; product engineering</div>
+    </div>
+    <div class="contact-kpi">
+      <div class="contact-kpi__val">SOC 2</div>
+      <div class="contact-kpi__label">Security reviews &amp; DPAs on request</div>
+    </div>
+    <div class="contact-kpi">
+      <div class="contact-kpi__val">99.9%</div>
+      <div class="contact-kpi__label">Target uptime for core platform</div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-channel-section" data-reveal aria-labelledby="channels-heading">
+  <h2 class="contact-section-title" id="channels-heading">Pick the right inbox</h2>
+  <p class="contact-section-lead">Different teams monitor different queues so nothing gets lost. Choose the lane that matches your request — or use the form below for anything general.</p>
+  <div class="contact-channel-grid">
+    <a class="contact-channel-card" href="mailto:sales@bluenest.ai">
+      <span class="contact-channel-card__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      </span>
+      <span class="contact-channel-card__title">Sales &amp; pilots</span>
+      <span class="contact-channel-card__meta">Pricing, demos, enterprise procurement, and trial design.</span>
+      <span class="contact-channel-card__link">sales@bluenest.ai →</span>
+    </a>
+    <a class="contact-channel-card" href="mailto:support@bluenest.ai">
+      <span class="contact-channel-card__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+      </span>
+      <span class="contact-channel-card__title">Product support</span>
+      <span class="contact-channel-card__meta">Integrations, bugs, account access, and workflow questions.</span>
+      <span class="contact-channel-card__link">support@bluenest.ai →</span>
+    </a>
+    <a class="contact-channel-card" href="mailto:partners@bluenest.ai">
+      <span class="contact-channel-card__icon" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+      </span>
+      <span class="contact-channel-card__title">Partners &amp; press</span>
+      <span class="contact-channel-card__meta">MLS integrations, data vendors, and media inquiries.</span>
+      <span class="contact-channel-card__link">partners@bluenest.ai →</span>
+    </a>
+  </div>
+</section>
+
+<div class="contact-divider" role="presentation" aria-hidden="true" style="max-width:1180px;margin-bottom:0"></div>
+
+<section class="contact-main" id="contact" aria-labelledby="contact-form-heading map-heading">
+  <div class="contact-main__grid">
+    <div class="contact-aside">
+      <div class="contact-steps" data-reveal>
+        <h3>What happens next</h3>
+        <ol>
+          <li>
+            <strong>We triage your note</strong>
+            Your message is routed by topic so the right specialist replies — usually the same day.
+          </li>
+          <li>
+            <strong>Discovery or support</strong>
+            For sales, we will schedule a short call; for support, we may ask for a file ID or screenshot.
+          </li>
+          <li>
+            <strong>Follow-up in writing</strong>
+            You will receive a written summary with next steps, timelines, and any security docs you asked for.
+          </li>
+        </ol>
+      </div>
+      <div class="contact-form-col" data-reveal>
+        <div class="contact-glass">
+          <div class="contact-glass__head">
+            <h2 id="contact-form-heading">Send a message</h2>
+            <p>Include context on your market, role, and timeline — it helps us respond with substance, not boilerplate.</p>
+          </div>
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="cn-float" id="wrap-name">
+              <input id="cn-name" name="name" type="text" autocomplete="name" placeholder=" " required maxlength="120"/>
+              <label for="cn-name">Name</label>
+              <p class="field-msg" id="err-name" role="alert"></p>
+            </div>
+            <div class="cn-float" id="wrap-email">
+              <input id="cn-email" name="email" type="email" autocomplete="email" placeholder=" " required maxlength="254"/>
+              <label for="cn-email">Work email</label>
+              <p class="field-msg" id="err-email" role="alert"></p>
+            </div>
+            <div class="cn-float" id="wrap-subject">
+              <input id="cn-subject" name="subject" type="text" autocomplete="off" placeholder=" " required maxlength="200"/>
+              <label for="cn-subject">Subject</label>
+              <p class="field-msg" id="err-subject" role="alert"></p>
+            </div>
+            <div class="cn-float" id="wrap-message">
+              <textarea id="cn-message" name="message" placeholder=" " required maxlength="5000"></textarea>
+              <label for="cn-message">Message</label>
+              <p class="field-msg" id="err-message" role="alert"></p>
+            </div>
+            <p id="form-status" class="s-sub" style="margin:0 0 0.75rem;min-height:1.25em;font-size:0.85rem" role="status" aria-live="polite"></p>
+            <button type="submit" class="cn-btn" id="cn-submit">
+              <span class="cn-btn__spinner" aria-hidden="true"></span>
+              <span class="cn-btn__label">Send message</span>
+              <svg class="cn-btn__icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-map-col" data-reveal>
+      <div class="contact-map-head">
+        <p class="contact-map-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Location · Canada
+        </p>
+        <h2 id="map-heading">Vancouver, British Columbia</h2>
+        <p id="map-desc">Our headquarters overlooks the Pacific Northwest market we model every day. Visit by appointment — or start with a video walkthrough.</p>
+        <div class="contact-map-actions">
+          <a class="contact-map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Vancouver%2C+BC%2C+Canada" target="_blank" rel="noopener noreferrer">
+            Open in Google Maps
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+          </a>
+          <span class="contact-coords" aria-hidden="true">~49.26° N · 123.11° W</span>
+        </div>
+      </div>
+      <div class="contact-map-frame">
+        <iframe
+          title="Interactive map centered on Vancouver, British Columbia"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.48841536562!2d-123.1607!3d49.2578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb1016cb5a39622f!2sVancouver%2C%20BC%2C%20Canada!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
+          allowfullscreen=""
+        ></iframe>
+        <div class="visit-card">
+          <h3>Visit us</h3>
+          <ul>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Vancouver, British Columbia, Canada</span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              <span>Email: <a href="mailto:contact@bluenest.ai">contact@bluenest.ai</a></span>
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>Phone: <a href="tel:+10000000000">+1 000 000 0000</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="f-logo">
+      <img src="logo.png" alt="BlueNest" class="f-logo-img" width="120" height="28"/>
+    </a>
+    <div class="f-copy">© 2025 BlueNest AI Inc.</div>
+    <div class="f-links">
+      <a href="#">Privacy</a><a href="#">Terms</a>
+      <a href="contact.html">Contact</a><a href="#">Status</a>
+    </div>
+  </div>
+</footer>
+
+<noscript>
+<style>
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .contact-hero__eyebrow,.contact-hero__title,.contact-hero__lead,.contact-hero__support{opacity:1!important;transform:none!important}
+</style>
+</noscript>
+<script>
+(function () {
+  var hero = document.getElementById('contact-hero');
+  var glow = document.getElementById('contact-hero-glow');
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (hero && glow && !reduced) {
+    hero.classList.add('js-glow-ready');
+    hero.addEventListener('mousemove', function (e) {
+      var r = hero.getBoundingClientRect();
+      glow.style.transform = 'translate(' + (e.clientX - r.left) + 'px,' + (e.clientY - r.top) + 'px)';
+    });
+    hero.addEventListener('mouseleave', function () { glow.style.opacity = '0.35'; });
+    hero.addEventListener('mouseenter', function () { glow.style.opacity = '1'; });
+  } else if (hero && glow) {
+    glow.style.display = 'none';
+  }
+
+  function reveal(el) {
+    el.classList.add('is-inview');
+  }
+  if (reduced) {
+    document.querySelectorAll('[data-reveal]').forEach(reveal);
+  } else if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        reveal(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.06 });
+    document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach(reveal);
+  }
+
+  var form = document.getElementById('contact-form');
+  var btn = document.getElementById('cn-submit');
+  var statusEl = document.getElementById('form-status');
+
+  function setInvalid(wrapId, inputId, errId, msg) {
+    var wrap = document.getElementById(wrapId);
+    var input = document.getElementById(inputId);
+    var err = document.getElementById(errId);
+    if (wrap) wrap.classList.add('is-invalid');
+    if (err) err.textContent = msg || '';
+    if (input) input.setAttribute('aria-invalid', 'true');
+  }
+  function clearInvalid(wrapId, inputId, errId) {
+    var wrap = document.getElementById(wrapId);
+    var input = document.getElementById(inputId);
+    var err = document.getElementById(errId);
+    if (wrap) wrap.classList.remove('is-invalid');
+    if (err) err.textContent = '';
+    if (input) input.removeAttribute('aria-invalid');
+  }
+
+  if (form) {
+    ['cn-name', 'cn-email', 'cn-subject', 'cn-message'].forEach(function (id) {
+      var input = document.getElementById(id);
+      if (!input) return;
+      input.addEventListener('input', function () {
+        var map = {
+          'cn-name': ['wrap-name', 'cn-name', 'err-name'],
+          'cn-email': ['wrap-email', 'cn-email', 'err-email'],
+          'cn-subject': ['wrap-subject', 'cn-subject', 'err-subject'],
+          'cn-message': ['wrap-message', 'cn-message', 'err-message']
+        };
+        var m = map[id];
+        if (m) clearInvalid(m[0], m[1], m[2]);
+        if (statusEl) statusEl.textContent = '';
+      });
+    });
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (statusEl) statusEl.textContent = '';
+      clearInvalid('wrap-name', 'cn-name', 'err-name');
+      clearInvalid('wrap-email', 'cn-email', 'err-email');
+      clearInvalid('wrap-subject', 'cn-subject', 'err-subject');
+      clearInvalid('wrap-message', 'cn-message', 'err-message');
+
+      var name = document.getElementById('cn-name');
+      var email = document.getElementById('cn-email');
+      var subject = document.getElementById('cn-subject');
+      var message = document.getElementById('cn-message');
+      var ok = true;
+
+      if (!name || !String(name.value).trim()) {
+        setInvalid('wrap-name', 'cn-name', 'err-name', 'Please enter your name.');
+        ok = false;
+      }
+      if (!email || !String(email.value).trim()) {
+        setInvalid('wrap-email', 'cn-email', 'err-email', 'Please enter your email.');
+        ok = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email.value).trim())) {
+        setInvalid('wrap-email', 'cn-email', 'err-email', 'Enter a valid email address.');
+        ok = false;
+      }
+      if (!subject || !String(subject.value).trim()) {
+        setInvalid('wrap-subject', 'cn-subject', 'err-subject', 'Please add a subject.');
+        ok = false;
+      }
+      if (!message || !String(message.value).trim()) {
+        setInvalid('wrap-message', 'cn-message', 'err-message', 'Please write a message.');
+        ok = false;
+      }
+      if (!ok) {
+        var first = form.querySelector('.is-invalid input, .is-invalid textarea');
+        if (first) first.focus();
+        return;
+      }
+
+      if (btn) {
+        btn.classList.add('is-loading');
+        btn.disabled = true;
+      }
+      if (statusEl) statusEl.textContent = 'Sending…';
+
+      window.setTimeout(function () {
+        if (btn) {
+          btn.classList.remove('is-loading');
+          btn.disabled = false;
+        }
+        if (statusEl) statusEl.textContent = 'Message received. We will get back to you shortly.';
+        form.reset();
+      }, 1600);
+    });
+  }
+})();
+</script>
+</body>
+</html>
