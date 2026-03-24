@@ -1782,7 +1782,25 @@ button.hero-wf-step {
 }
 .faq-item.open .faq-toggle { background: var(--blue); border-color: var(--blue); color: var(--white); transform: rotate(45deg); }
 .faq-a { font-size: .88rem; color: rgba(255,255,255,.4); line-height: 1.8; max-height: 0; overflow: hidden; transition: max-height .4s ease, padding .3s; }
-.faq-item.open .faq-a { max-height: 240px; padding-top: .85rem; }
+.faq-item.open .faq-a { max-height: 400px; padding-top: .85rem; }
+.faq-more {
+  margin-top: 1.5rem;
+  padding-top: 1.35rem;
+  border-top: 1px solid rgba(255,255,255,.07);
+  font-size: .88rem;
+  color: rgba(255,255,255,.42);
+  line-height: 1.75;
+}
+.faq-more a {
+  color: var(--blue);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: .08rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: color .2s, border-color .2s;
+}
+.faq-more a:hover { color: #fff; border-bottom-color: rgba(255,255,255,.5); }
+.faq-more__row + .faq-more__row { margin-top: .65rem; }
 
 /* ══════════════════════════════════════
    CTA
@@ -2917,11 +2935,11 @@ function Pricing() {
 
 /* ══ FAQ ══ */
 const faqs = [
-  { q: 'How does Smart Property Analysis use listing photos?', a: 'Smart Property Analysis applies computer vision and structured models to listing images to detect renovation level, view and exposure, finish quality, and condition cues. Those signals feed View & Renovation Detection and the broader 150+ data point model — so adjustments trace to what appears in the photos.' },
-  { q: 'How is BlueNest different from Zillow or Redfin estimates?', a: 'Zillow uses statistical averaging across millions of data points. BlueNest applies photo-based condition detection, expert-level comparable selection, and structured appraisal logic — delivering appraiser-grade precision, not averages.' },
-  { q: 'Is BlueNest suitable for licensed appraisers?', a: 'Yes. BlueNest applies transparent appraisal logic — not opaque algorithms — so appraisers can validate, supplement, and accelerate their workflows with fully auditable comparable data.' },
-  { q: 'What markets does BlueNest cover?', a: "We're expanding continuously. Contact us to check availability in your market or request early access for a specific region." },
-  { q: 'Can I cancel Premium anytime?', a: 'Yes — cancel anytime from your dashboard. No questions asked, no lock-in. You retain full access until the end of your billing cycle.' },
+  { q: 'How is BlueNest different from tools like Zillow or HouseSigma?', a: 'Most platforms rely on automated estimates based on limited data. BlueNest takes a different approach — using real comparable sales, appraisal-style valuation logic, and AI-powered analysis of listing photos to evaluate view, layout, and renovation. The result is a more accurate and transparent valuation.' },
+  { q: 'How accurate are BlueNest valuations?', a: 'BlueNest is designed to replicate how experienced realtors and appraisers determine value, using real market data and structured analysis. While no model can predict an exact sale price, BlueNest provides a highly accurate and defensible valuation range based on real-world evidence.' },
+  { q: 'What data does BlueNest use to determine value?', a: 'BlueNest analyzes real comparable sales, active listings, and failed listings, along with property characteristics, market trends, and AI-driven insights from listing photos.' },
+  { q: 'What is BlueVision?', a: 'BlueVision is BlueNest’s proprietary, first-to-market AI technology that analyzes listing photos to detect view quality, layout, and renovation level — adding insights that traditional data cannot capture.' },
+  { q: 'Who is BlueNest designed for?', a: 'BlueNest is built for home buyers, sellers, realtors, and appraisers — anyone who needs a clear, data-driven understanding of property value.' },
 ];
 
 function FAQ() {
@@ -2936,10 +2954,11 @@ function FAQ() {
             Questions,<br/><em style={{fontStyle:'italic',color:'rgba(255,255,255,.3)'}}>answered.</em>
           </h2>
           <p className="r d2" style={{fontSize:'.9rem',color:'rgba(255,255,255,.4)',lineHeight:1.7}}>
-            Can't find what you need?{' '}
-            <a href="#" style={{color:'var(--blue)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>
-              Contact us.
-            </a>
+            These are a few of the questions we hear most often. For the full list visit{' '}
+            <a href="faq.html" style={{color:'var(--blue)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>our FAQ page</a>
+            {' '}— or{' '}
+            <a href="contact.html" style={{color:'var(--blue)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>reach out</a>
+            {' '}if yours is not covered.
           </p>
         </div>
         <div className="faq-list r d1">
@@ -2952,6 +2971,7 @@ function FAQ() {
               <div className="faq-a">{a}</div>
             </div>
           ))}
+          
         </div>
       </div>
     </div>
