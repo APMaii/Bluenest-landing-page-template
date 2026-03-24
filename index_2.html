@@ -1474,192 +1474,189 @@ button.hero-wf-step {
 ══════════════════════════════════════ */
 .bn-diff-section {
   background: var(--navy);
-  padding: clamp(4.5rem, 10vw, 6.5rem) 5%;
+  padding: clamp(3.75rem, 8vw, 5.25rem) 5%;
   position: relative; overflow: hidden;
 }
 .bn-diff-section .metrics-svg-bg {
-  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: .11;
+  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: .1;
 }
 .bn-diff-inner {
-  max-width: 760px;
+  max-width: 1080px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-.bn-diff-frame {
+.bn-diff-head {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.35rem);
+  max-width: 38rem;
+  margin-left: auto;
+  margin-right: auto;
 }
-.bn-diff-frame__rule {
-  display: block;
+.bn-diff-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  font-family: 'DM Mono', monospace;
+  font-size: .68rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(201, 148, 28, .92);
+  margin-bottom: .9rem;
+}
+.bn-diff-kicker::before,
+.bn-diff-kicker::after {
+  content: '';
+  width: 1.5rem;
   height: 1px;
-  max-width: min(100%, 440px);
-  margin: 0 auto;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
+  background: linear-gradient(90deg, transparent, rgba(201, 148, 28, .45));
 }
-.bn-diff-frame__label {
-  font-family: 'DM Mono', monospace;
-  font-size: clamp(.55rem, 1.45vw, .65rem);
-  font-weight: 500;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.38);
-  margin: .65rem 0;
-  line-height: 1.45;
-}
-.bn-diff-sl {
-  font-family: 'DM Mono', monospace;
-  font-size: .72rem;
-  letter-spacing: .14em;
-  text-transform: uppercase;
-  color: rgba(201, 148, 28, .95);
-  text-align: center;
-  margin-bottom: .85rem;
+.bn-diff-kicker::after {
+  background: linear-gradient(90deg, rgba(201, 148, 28, .45), transparent);
 }
 .bn-diff-h2 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2rem, 4.8vw, 3rem);
+  font-size: clamp(1.75rem, 4.2vw, 2.65rem);
   font-weight: 900;
   letter-spacing: -.035em;
-  line-height: 1.08;
+  line-height: 1.1;
   color: var(--white);
-  text-align: center;
-  margin: 0 0 1.35rem;
+  margin: 0 0 .85rem;
 }
 .bn-diff-h2 span { display: block; }
-.bn-diff-h2__accent {
-  margin-top: .15em;
-  color: rgba(200, 215, 235, .92);
+.bn-diff-h2__line2 {
+  margin-top: .12em;
+  color: rgba(220, 232, 248, .95);
 }
-.bn-diff-h2__accent em {
+.bn-diff-h2__line2 em {
   font-style: italic;
   font-weight: 800;
   color: var(--gold);
 }
 .bn-diff-lead {
-  font-size: clamp(.95rem, 2vw, 1.05rem);
-  line-height: 1.75;
-  color: rgba(255,255,255,.42);
-  text-align: center;
-  margin: 0 auto 2.25rem;
-  max-width: 42rem;
+  font-size: .9rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,.38);
+  margin: 0;
 }
-.bn-diff-dash {
-  border: 0;
-  height: 0;
-  border-top: 1px dashed rgba(255,255,255,.14);
-  margin: 2.35rem 0;
+.bn-diff-lead strong {
+  color: rgba(255,255,255,.55);
+  font-weight: 600;
 }
-.bn-diff-pillar-meta {
+.bn-diff-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: stretch;
+}
+.bn-diff-card {
+  position: relative;
+  padding: 1.35rem 1.2rem 1.25rem;
+  border-radius: 12px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.09);
+  transition: border-color .25s, background .25s, transform .25s;
+}
+.bn-diff-card:hover {
+  border-color: rgba(90, 168, 255, .28);
+  background: rgba(255,255,255,.055);
+  transform: translateY(-2px);
+}
+.bn-diff-card__n {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255,255,255,.07);
+  position: absolute;
+  top: .85rem;
+  right: 1rem;
+  user-select: none;
+  pointer-events: none;
+}
+.bn-diff-card__label {
   font-family: 'DM Mono', monospace;
-  font-size: .62rem;
+  font-size: .58rem;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: rgba(255,255,255,.35);
-  margin-bottom: 1rem;
-  text-align: center;
+  color: rgba(120, 185, 255, .85);
+  margin: 0 0 .5rem;
 }
-.bn-diff-tag {
-  display: inline-block;
-  font-family: 'DM Mono', monospace;
-  font-size: .62rem;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: rgba(180, 210, 245, .88);
-  padding: .38rem .75rem;
-  border-radius: 6px;
-  border: 1px solid rgba(90, 168, 255, .28);
-  background: rgba(20, 88, 184, .12);
-  margin-bottom: 1rem;
-}
-.bn-diff-pillar-h {
+.bn-diff-card__title {
   font-family: 'Fraunces', serif;
-  font-size: clamp(1.35rem, 3vw, 1.65rem);
+  font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -.02em;
   color: var(--white);
-  line-height: 1.15;
+  line-height: 1.2;
+  margin: 0 0 .55rem;
+}
+.bn-diff-card__hook {
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: rgba(255,255,255,.72);
+  margin: 0 0 .45rem;
+}
+.bn-diff-card__detail {
+  font-size: .78rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,.38);
   margin: 0 0 .85rem;
-  text-align: center;
 }
-.bn-diff-pillar-body {
-  font-size: .94rem;
-  line-height: 1.75;
-  color: rgba(255,255,255,.45);
-  text-align: center;
-  margin: 0 auto 1.25rem;
-  max-width: 38rem;
-}
-.bn-diff-pillar-bullets {
+.bn-diff-card__chips {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  flex-direction: column;
-  gap: .55rem;
-  max-width: 22rem;
-  margin-left: auto;
-  margin-right: auto;
+  flex-wrap: wrap;
+  gap: .35rem;
 }
-.bn-diff-pillar-bullets li {
-  position: relative;
-  padding-left: 1.15rem;
-  font-size: .86rem;
-  line-height: 1.55;
-  color: rgba(255,255,255,.5);
-  text-align: left;
-}
-.bn-diff-pillar-bullets li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: .55em;
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--gold);
-  opacity: .9;
-}
-.bn-diff-callout {
-  margin-top: 2.5rem;
-  padding: clamp(1.75rem, 4vw, 2.35rem) clamp(1.35rem, 4vw, 2rem);
-  border-radius: 14px;
-  background: linear-gradient(165deg, #040c18 0%, #061a2e 50%, #071426 100%);
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 20px 48px rgba(0,0,0,.28);
-  text-align: center;
-}
-.bn-diff-callout-eyebrow {
+.bn-diff-card__chips li {
   font-family: 'DM Mono', monospace;
-  font-size: .65rem;
-  letter-spacing: .2em;
+  font-size: .58rem;
+  letter-spacing: .06em;
   text-transform: uppercase;
-  color: rgba(201, 148, 28, .88);
-  margin: 0 0 .85rem;
+  color: rgba(255,255,255,.45);
+  padding: .28rem .5rem;
+  border-radius: 4px;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.06);
 }
-.bn-diff-callout-h {
-  font-family: 'Fraunces', serif;
-  font-size: clamp(1.25rem, 3.2vw, 1.55rem);
-  font-weight: 900;
-  letter-spacing: -.025em;
-  line-height: 1.18;
-  color: var(--white);
-  margin: 0 0 1rem;
-  max-width: 28rem;
-  margin-left: auto;
-  margin-right: auto;
+.bn-diff-bar {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.1rem 1.35rem;
+  border-radius: 12px;
+  background: linear-gradient(105deg, rgba(4, 12, 24, .95) 0%, rgba(8, 28, 52, .88) 100%);
+  border: 1px solid rgba(255,255,255,.1);
 }
-.bn-diff-callout-body {
-  font-size: .9rem;
-  line-height: 1.72;
-  color: rgba(255,255,255,.42);
-  margin: 0 auto 1.5rem;
-  max-width: 34rem;
-}
-.bn-diff-callout .btn-primary {
+.bn-diff-bar p {
+  margin: 0;
   font-size: .88rem;
-  padding: .58rem 1.35rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,.45);
+  max-width: 26rem;
 }
-@media (max-width: 520px) {
-  .bn-diff-pillar-bullets { max-width: none; }
+.bn-diff-bar p strong {
+  color: rgba(255,255,255,.88);
+  font-weight: 700;
+}
+.bn-diff-bar .btn-primary {
+  flex-shrink: 0;
+  font-size: .85rem;
+  padding: .52rem 1.2rem;
+}
+@media (max-width: 900px) {
+  .bn-diff-grid { grid-template-columns: 1fr; max-width: 28rem; margin-left: auto; margin-right: auto; }
+  .bn-diff-kicker::before, .bn-diff-kicker::after { width: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bn-diff-card:hover { transform: none; }
 }
 
 /* ══════════════════════════════════════
@@ -2919,70 +2916,64 @@ function FeatureRail({ features }) {
 
 /* ══ WHAT MAKES BLUENEST DIFFERENT ══ */
 function WhatMakesDifferent() {
-  const pillars = [
+  const cards = [
     {
-      meta: 'Pillar 1 — BlueVision',
-      tag: 'BlueVision',
-      title: 'We analyze listing photos',
-      body: 'BlueVision analyzes every listing photo to detect view quality, renovation level, and condition. It builds a layer of visual intelligence that no traditional valuation tool has ever been able to capture. It sees what the data cannot.',
-      bullets: ['View quality scoring', 'Renovation & condition detection', 'Layout & finish analysis'],
+      n: '01',
+      label: 'BlueVision',
+      title: 'The listing, decoded',
+      hook: 'Photos drive real signals — not filler thumbnails.',
+      detail: 'View, renovation, condition, and layout from every image. What spreadsheets alone will always miss.',
+      chips: ['View & exposure', 'Renovation level', 'Layout & finish'],
     },
     {
-      meta: 'Pillar 2 — True comparables',
-      tag: 'True comparables',
-      title: 'We match what actually compares',
-      body: 'BlueNest identifies the most comparable homes by analyzing not just basic data, but layout, condition, and true similarity — the same way experienced realtors and appraisers do.',
-      bullets: ['150+ structured data points per property', 'Renovation & view matching', 'Appraisal-grade logic'],
+      n: '02',
+      label: 'True comparables',
+      title: 'Comps that actually compare',
+      hook: 'Same rigor as an experienced agent or appraiser.',
+      detail: 'Similarity goes past beds and sq ft — condition, view, and 150+ structured points.',
+      chips: ['Deep matching', 'Appraisal-style logic', 'Defensible picks'],
     },
     {
-      meta: 'Pillar 3 — Market intelligence',
-      tag: 'Market intelligence',
-      title: 'We read the full market',
-      body: 'BlueNest evaluates sold, active, and failed listings to understand how the market has truly responded — giving you a complete picture of value, competition, and timing.',
-      bullets: ['Sold & active listings', 'Failed & expired listings', 'Real-time market pulse'],
+      n: '03',
+      label: 'Market intelligence',
+      title: 'The whole market story',
+      hook: 'Sold and active — plus what failed and why.',
+      detail: 'See value, competition, and timing from how the market really reacted.',
+      chips: ['Sold & active', 'Failed / expired', 'Market pulse'],
     },
   ];
   return (
     <div className="bn-diff-section" id="different">
       <CircuitBg/>
       <div className="bn-diff-inner">
-        <div className="bn-diff-frame r d0">
-          <span className="bn-diff-frame__rule" aria-hidden="true"/>
-          <p className="bn-diff-frame__label">Section 2 — What makes BlueNest different</p>
-          <span className="bn-diff-frame__rule" aria-hidden="true"/>
-        </div>
-        <p className="bn-diff-sl r d1">What makes BlueNest different</p>
-        <h2 className="bn-diff-h2 r d1">
-          <span>Most tools see data.</span>
-          <span className="bn-diff-h2__accent"><em>BlueNest</em> sees the property.</span>
-        </h2>
-        <p className="bn-diff-lead r d2">
-          Built on BlueVision, our proprietary AI technology, BlueNest goes beyond traditional tools by combining AI vision, real appraisal logic, and full market analysis to determine what a property is truly worth.
-        </p>
-        {pillars.map((p, i) => (
-          <div key={p.meta}>
-            <hr className="bn-diff-dash" aria-hidden="true"/>
-            <div className={`bn-diff-pillar r d${i + 1}`}>
-              <p className="bn-diff-pillar-meta">{p.meta}</p>
-              <div style={{textAlign:'center'}}>
-                <span className="bn-diff-tag">{p.tag}</span>
-              </div>
-              <h3 className="bn-diff-pillar-h">{p.title}</h3>
-              <p className="bn-diff-pillar-body">{p.body}</p>
-              <ul className="bn-diff-pillar-bullets">
-                {p.bullets.map((b) => (
-                  <li key={b}>{b}</li>
+        <header className="bn-diff-head r d0">
+          <span className="bn-diff-kicker">What makes BlueNest different</span>
+          <h2 className="bn-diff-h2 r d1">
+            <span>Most tools see data.</span>
+            <span className="bn-diff-h2__line2"><em>BlueNest</em> sees the property.</span>
+          </h2>
+          <p className="bn-diff-lead r d2">
+            <strong>Vision + comps + full market</strong> — one transparent, appraisal-grade path from evidence to value.
+          </p>
+        </header>
+        <div className="bn-diff-grid r d2">
+          {cards.map((c, i) => (
+            <article key={c.n} className={`bn-diff-card r d${i + 1}`}>
+              <span className="bn-diff-card__n" aria-hidden="true">{c.n}</span>
+              <p className="bn-diff-card__label">{c.label}</p>
+              <h3 className="bn-diff-card__title">{c.title}</h3>
+              <p className="bn-diff-card__hook">{c.hook}</p>
+              <p className="bn-diff-card__detail">{c.detail}</p>
+              <ul className="bn-diff-card__chips">
+                {c.chips.map((t) => (
+                  <li key={t}>{t}</li>
                 ))}
               </ul>
-            </div>
-          </div>
-        ))}
-        <div className="bn-diff-callout r d4">
-          <p className="bn-diff-callout-eyebrow">The result</p>
-          <h3 className="bn-diff-callout-h">This is what appraisal-grade valuation actually looks like.</h3>
-          <p className="bn-diff-callout-body">
-            No black boxes. No surface-level estimates. Just a clear, structured valuation built on what the property looks like, what truly compares, and how the market is actually behaving.
-          </p>
+            </article>
+          ))}
+        </div>
+        <div className="bn-diff-bar r d4">
+          <p><strong>Appraisal-grade, not a black box.</strong> Every step is visible — from photos to comps to market behavior.</p>
           <a href="demo.html" className="btn-primary">See it in action <Arrow size={14}/></a>
         </div>
       </div>
