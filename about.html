@@ -29,6 +29,7 @@
     <a href="index.html#features">Product</a>
     <a href="index.html#who">Who it's for</a>
     <a href="index.html#pricing">Pricing</a>
+    <a href="demo.html">Demo</a>
     <a href="about.html" aria-current="page">About</a>
     <a href="contact.html">Contact</a>
     <a href="faq.html">FAQ</a>
@@ -50,7 +51,8 @@
   <a href="index.html#features">Product</a>
   <a href="index.html#who">Who it's for</a>
   <a href="index.html#pricing">Pricing</a>
-    <a href="about.html" aria-current="page">About</a>
+  <a href="demo.html">Demo</a>
+  <a href="about.html" aria-current="page">About</a>
   <a href="contact.html">Contact</a>
   <a href="faq.html">FAQ</a>
   <button type="button" class="theme-toggle" id="theme-toggle-mob" aria-label="Toggle dark mode"><svg class="theme-mob-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
@@ -235,10 +237,7 @@ function AboutHero() {
       <div className="about-hero__fade" aria-hidden="true" />
       <div className="about-hero__inner">
         <p className="about-hero__eyebrow">Intelligence · Real estate · Trust</p>
-        <h1 className="about-hero__title">About BlueNest</h1>
-        <p className="about-hero__subtitle">
-          <span className="about-gradient-text">Redefining how property value is understood</span>
-        </p>
+        <h1 className="about-hero__title">Reimagining How Property Value Is Determined</h1>
         <div className="about-hero__line" aria-hidden="true" />
       </div>
     </header>
@@ -246,32 +245,19 @@ function AboutHero() {
 }
 
 const STORY_PARAS = [
-  <>
-    <strong>BlueNest was built to solve one of real estate’s biggest problems</strong> — understanding what a property is truly worth. Traditional tools rely on surface-level data and automated estimates.{' '}
-    <span className="about-highlight">We take a different approach.</span>
-  </>,
-  <>
-    Developed by real estate professionals and technologists, BlueNest replicates how experienced realtors and appraisers evaluate property — combining{' '}
-    <span className="about-gradient-inline">real comparable sales</span>, structured valuation logic, and deeper analysis of view, layout, and condition.
-  </>,
-  <>
-    By integrating <strong>AI-powered photo analysis</strong> with full-market data — including sold, active, and failed listings — BlueNest delivers{' '}
-    <span className="about-highlight">accurate, transparent valuations you can trust.</span>
-  </>,
-  <>
-    Whether you’re buying, selling, advising, or appraising, BlueNest gives you the clarity, confidence, and insight to make better real estate decisions.
-  </>,
-  <>
-    BlueNest was built by a team combining <strong>real estate expertise</strong>, advanced technical skill, and analytical backgrounds — bringing together experience from medicine, technology, and high-performance engineering.
-  </>,
-  <>
-    From understanding how real-world property decisions are made to building the systems that power them, our team was uniquely positioned to{' '}
-    <span className="about-gradient-inline">rethink how property valuation should work.</span>
-  </>,
-  <>
-    Built over three years of real estate analysis and development, BlueNest is designed to set a <strong>new standard in property valuation</strong>.
-  </>,
+  "BlueNest was built to solve one of real estate's biggest problems — understanding what a property is truly worth. Traditional tools rely on surface-level data and automated estimates. We take a different approach.",
+  'Developed by real estate professionals and technologists, BlueNest replicates how experienced realtors and appraisers evaluate property — combining real comparable sales, structured valuation logic, and deeper analysis of view, layout, and condition.',
+  'By integrating AI-powered photo analysis with full-market data — including sold, active, and failed listings — BlueNest delivers accurate, transparent valuations you can trust.',
+  "Whether you're buying, selling, advising, or appraising, BlueNest gives you the clarity, confidence, and insight to make better real estate decisions.",
 ];
+
+const TEAM_SECTION_TEXT_PARAS = [
+  'BlueNest was built by a team combining real estate expertise, advanced technical skill, and analytical backgrounds — bringing together experience from medicine, technology, and high-performance engineering.',
+  'From understanding how real-world property decisions are made to building the systems that power them, our team was uniquely positioned to rethink how property valuation should work.',
+];
+
+const CLOSING_LINE =
+  'Built over three years of real estate analysis and development, BlueNest is designed to set a new standard in property valuation.';
 
 function StorySection() {
   return (
@@ -284,9 +270,9 @@ function StorySection() {
             Precision at the intersection of <em style={{ fontStyle: 'italic', opacity: 0.85 }}>human judgment</em> and machine intelligence
           </h2>
         </header>
-        {STORY_PARAS.map((content, i) => (
+        {STORY_PARAS.map((text, i) => (
           <p key={i} className="about-story__p" data-reveal style={{ transitionDelay: `${0.06 * i}s` }}>
-            {content}
+            {text}
           </p>
         ))}
         <DecoWave />
@@ -328,14 +314,29 @@ function TeamSection() {
           <h2 id="team-heading" className="about-team__title">
             Meet the Team
           </h2>
-          <p className="about-team__sub">
-            Operators and builders who’ve spent years in markets, code, and research — united around a single standard for how valuation should feel.
-          </p>
+          <p className="about-team__sub">Built by a team that understands real estate from every angle.</p>
         </header>
+        <div className="about-story__wrap" style={{ marginBottom: '2.75rem' }}>
+          {TEAM_SECTION_TEXT_PARAS.map((text, i) => (
+            <p
+              key={i}
+              className="about-story__p"
+              data-reveal
+              style={{ transitionDelay: `${0.08 + 0.06 * i}s` }}
+            >
+              {text}
+            </p>
+          ))}
+        </div>
         <div className="about-team__grid">
           {TEAM.map((m, i) => (
             <TeamCard key={m.name} member={m} revealIndex={i} />
           ))}
+        </div>
+        <div className="about-story__wrap" style={{ marginTop: '3rem' }} data-reveal>
+          <p className="about-story__p" style={{ marginBottom: 0 }}>
+            {CLOSING_LINE}
+          </p>
         </div>
       </div>
     </section>
