@@ -2162,7 +2162,7 @@ function Navbar({ setMob, dark, onToggleTheme }) {
         <img src="logo.png" alt="BlueNest" className="logo-img" width="160" height="40"/>
       </a>
       <div className="nav-links">
-        {[['#hero','Home'],['#features','Product'],['#who',"Who it's for"],['#pricing','Pricing'],['about.html','About'],['contact.html','Contact'],['faq.html','FAQ']].map(([href,label]) => (
+        {[['#hero','Home'],['#features','Product'],['#who',"Who it's for"],['#pricing','Pricing'],['demo.html','Demo'],['about.html','About'],['contact.html','Contact'],['faq.html','FAQ']].map(([href,label]) => (
           <a key={href} href={href}>{label}</a>
         ))}
       </div>
@@ -2446,7 +2446,7 @@ function Hero() {
           <a href="https://app.bluenest.ai" className="btn-primary">
             Try BlueNest Free<Arrow size={14}/>
           </a>
-          <a href="#features" className="btn-secondary">
+          <a href="demo.html" className="btn-secondary">
             Watch Demo
           </a>
         </div>
@@ -2973,7 +2973,7 @@ function CTAStrip() {
         </p>
         <div className="r d3" style={{display:'flex',gap:'.8rem',justifyContent:'center',flexWrap:'wrap'}}>
           <a href="https://app.bluenest.ai" className="btn-primary"><Arrow size={14}/> Try BlueNest</a>
-          <a href="#features" className="btn-secondary"><Arrow size={14}/> Watch Demo</a>
+          <a href="demo.html" className="btn-secondary"><Arrow size={14}/> Watch Demo</a>
         </div>
       </div>
     </div>
@@ -2991,6 +2991,7 @@ function Footer() {
         <div className="f-copy">© 2025 BlueNest AI Inc.</div>
         <div className="f-links">
           <a href="about.html">About</a>
+          <a href="demo.html">Demo</a>
           <a href="contact.html">Contact</a>
           <a href="faq.html">FAQ</a>
           <a href="#">Privacy</a><a href="#">Terms</a>
@@ -3005,7 +3006,7 @@ function Footer() {
 function MobileNav({ open, onClose, dark, onToggleTheme }) {
   return (
     <div className={`mob-overlay${open ? ' open' : ''}`}>
-      {[['#hero','Home'],['#features','Product'],['#who',"Who it's for"],['#pricing','Pricing'],['about.html','About'],['contact.html','Contact'],['faq.html','FAQ']].map(([href,label]) => (
+      {[['#hero','Home'],['#features','Product'],['#who',"Who it's for"],['#pricing','Pricing'],['demo.html','Demo'],['about.html','About'],['contact.html','Contact'],['faq.html','FAQ']].map(([href,label]) => (
         <a key={href} href={href} onClick={onClose}>{label}</a>
       ))}
       <button type="button" className="theme-toggle" onClick={onToggleTheme} aria-label={dark ? 'Light mode' : 'Dark mode'}>
