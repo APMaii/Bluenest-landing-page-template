@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Demo — BlueNest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="subpages.css"/>
+<link rel="stylesheet" href="demo.css"/>
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='dark'){document.documentElement.setAttribute('data-theme','dark');}else{document.documentElement.setAttribute('data-theme','light');if(t!=='light'){localStorage.setItem('theme','light');}}}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<script defer src="subpages.js"></script>
+</head>
+<body class="demo-page">
+<div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+<nav class="nav solid nav--always-solid" id="nav">
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="BlueNest" class="logo-img" width="160" height="40"/>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#features">Product</a>
+    <a href="index.html#who">Who it's for</a>
+    <a href="index.html#pricing">Pricing</a>
+    <a href="demo.html" aria-current="page">Demo</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+  </div>
+  <div class="nav-right">
+    <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Theme">
+      <svg id="icon-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <a href="#" class="btn-nav-ghost">Log in</a>
+    <a href="index.html#pricing" class="btn-nav-fill">Get started
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+  <button class="ham" type="button" id="nav-open" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mob-overlay" id="mob-overlay" aria-hidden="true">
+  <a href="index.html">Home</a>
+  <a href="index.html#features">Product</a>
+  <a href="index.html#who">Who it's for</a>
+  <a href="index.html#pricing">Pricing</a>
+  <a href="demo.html" aria-current="page">Demo</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="faq.html">FAQ</a>
+  <button type="button" class="theme-toggle" id="theme-toggle-mob" aria-label="Toggle dark mode"><svg class="theme-mob-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+  <button class="mob-close" type="button" id="nav-close">[ CLOSE ]</button>
+</div>
+
+<main class="demo-main" id="main">
+  <header class="demo-hero" aria-labelledby="demo-hero-title">
+    <div class="demo-hero__mesh" aria-hidden="true"></div>
+    <div class="demo-hero__grid" aria-hidden="true"></div>
+    <div class="demo-hero__glow demo-hero__glow--a" aria-hidden="true"></div>
+    <div class="demo-hero__glow demo-hero__glow--b" aria-hidden="true"></div>
+    <div class="demo-hero__noise" aria-hidden="true"></div>
+    <div class="demo-hero__inner">
+      <div class="demo-hero__eyebrow">
+        <span class="demo-hero__eyebrow-line" aria-hidden="true"></span>
+        <span>Product demo</span>
+        <span class="demo-hero__eyebrow-line" aria-hidden="true"></span>
+      </div>
+      <h1 class="demo-hero__title" id="demo-hero-title">See How BlueNest Values a Property</h1>
+      <p class="demo-hero__lead">Watch how BlueNest analyzes comparable homes, listing photos, and real market data to deliver a clear and transparent valuation.</p>
+    </div>
+    <div class="demo-hero__fade" aria-hidden="true"></div>
+  </header>
+
+  <div class="demo-content">
+    <div class="demo-video-shell">
+      <div class="demo-video-chrome">
+        <div class="demo-video-chrome__bar">
+          <span class="demo-video-chrome__dots" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span class="demo-video-chrome__label">Walkthrough</span>
+        </div>
+        <div class="demo-video">
+          <iframe
+            src="https://www.youtube.com/embed/s9YlqC0rchY"
+            title="BlueNest property valuation demo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <p class="demo-intro">This is not just an estimate — it's a step-by-step valuation built on real data and real market behavior.</p>
+
+    <section class="demo-panel" aria-labelledby="demo-panel-heading">
+      <div class="demo-panel__head">
+        <h2 class="demo-panel__title" id="demo-panel-heading">What you'll see</h2>
+        <p class="demo-panel__sub">A transparent look at each layer of the valuation.</p>
+      </div>
+      <ul class="demo-list">
+        <li>How BlueNest identifies truly comparable properties</li>
+        <li>How BlueVision analyzes listing photos to detect view, condition, and layout</li>
+        <li>How sold, active, and failed listings shape the valuation</li>
+        <li>How adjustments are made to reflect real market conditions</li>
+        <li>How a clear, transparent price range is determined</li>
+      </ul>
+    </section>
+
+    <div class="demo-closing-block">
+      <p class="demo-support">Every step is visible. Every decision is backed by data.</p>
+      <p class="demo-closing">See exactly how value is determined — and why it's different.</p>
+    </div>
+
+    <div class="demo-cta-wrap">
+      <a class="demo-cta" href="https://app.bluenest.ai">Try BlueNest · Run Your Own Property
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <a href="index.html" class="f-logo">
+      <img src="logo.png" alt="BlueNest" class="f-logo-img" width="120" height="28"/>
+    </a>
+    <div class="f-copy">© 2025 BlueNest AI Inc.</div>
+    <div class="f-links">
+      <a href="#">Privacy</a><a href="#">Terms</a>
+      <a href="contact.html">Contact</a><a href="#">Status</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
