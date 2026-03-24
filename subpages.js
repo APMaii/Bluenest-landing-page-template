@@ -69,4 +69,9 @@
       a.addEventListener('click', closeMob);
     });
   }
+
+  var y = new Date().getFullYear();
+  document.querySelectorAll('.js-footer-year').forEach(function (el) {
+    el.textContent = String(y);
+  });
 })();
