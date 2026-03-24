@@ -1528,8 +1528,9 @@ button.hero-wf-step {
 .who-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
 .who-head { max-width: 760px; margin-bottom: 3.5rem; }
 .who-head .s-sub { max-width: 100%; }
+.who-head .s-sub + .s-sub { margin-top: 1rem; }
 .who-grid {
-  display: grid; grid-template-columns: repeat(4,1fr);
+  display: grid; grid-template-columns: repeat(5,1fr);
   gap: 1px; background: var(--border);
   border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
 }
@@ -1575,6 +1576,12 @@ button.hero-wf-step {
   letter-spacing: -.03em; color: var(--ink); margin-bottom: .4rem;
 }
 .wc-text { font-size: .83rem; color: var(--muted); line-height: 1.65; }
+.wc-tag {
+  display: inline-flex; align-items: center;
+  font-family: 'DM Mono', monospace;
+  font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--blue); margin-top: 1rem;
+}
 
 /* ══════════════════════════════════════
    TESTIMONIALS
@@ -1796,6 +1803,15 @@ button.hero-wf-step {
 }
 .cta-h2 em { font-style: italic; color: var(--blue); font-weight: 700; }
 .cta-sub { font-size: 1.02rem; color: var(--muted); margin-bottom: 2.5rem; line-height: 1.7; }
+.cta-inner .cta-sub:first-of-type { margin-bottom: 1.15rem; }
+.cta-inner .cta-sub:nth-of-type(2) {
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+[data-theme="dark"] .cta-inner .cta-sub:nth-of-type(2) {
+  color: rgba(255, 255, 255, .88);
+}
 
 /* ══════════════════════════════════════
    FOOTER
@@ -2407,30 +2423,31 @@ function Hero() {
       <div className="hero-wash"/>
 
       <div className="hero-inner">
-        <div className="hero-eyebrow" style={{animation:'fadeUp .55s ease both'}}>
-          <div className="eyebrow-pip"/>
-          <span className="spa-brand">Smart Property Analysis</span>
-          <span style={{opacity:.45,margin:'0 .15rem'}}>·</span>
-          Live
-        </div>
+        
 
         <h1 className="hero-h1" style={{animation:'fadeUp .65s .06s ease both'}}>
-          <span className="hero-line">Valuation that</span>
-          <span className="hero-line hero-gradient">holds up in the room.</span>
+          <span className="hero-line">See What a Property</span>
+          <span className="hero-line hero-gradient">Is Really Worth</span>
         </h1>
 
         <p className="hero-lead" style={{animation:'fadeUp .68s .12s ease both'}}>
-          BlueNest evaluates each property across 150+ real estate data points — combining physical attributes,
-          condition, and market behavior so you get transparent comparables, pricing range, and market context
-          in one workflow.
+          Transparent. Accurate. In seconds.
+          The first valuation engine that analyzes listing photos.
         </p>
 
+        <div className="hero-eyebrow" style={{animation:'fadeUp .55s ease both'}}>
+          <div className="eyebrow-pip"/>
+          <span className="spa-brand">AI-Powered Valuations.</span>
+          <span style={{opacity:.45,margin:'0 .15rem'}}>·</span>
+          Now Live in Canada · Coming Soon to US Market
+        </div>
+
         <div className="hero-ctas" style={{animation:'fadeUp .7s .18s ease both'}}>
-          <a href="#pricing" className="btn-primary">
-            Get started <Arrow size={14}/>
+          <a href="https://app.bluenest.ai" className="btn-primary">
+            Try BlueNest Free<Arrow size={14}/>
           </a>
           <a href="#features" className="btn-secondary">
-            Platform tour
+            Watch Demo
           </a>
         </div>
 
@@ -2694,9 +2711,9 @@ function FeatureRail({ features }) {
     >
       <div className="feat-rail-sticky">
         <div className="feat-rail-head">
-          <p className="feat-rail-kicker">Platform</p>
+          <p className="feat-rail-kicker">Capabilities</p>
           <p className="feat-rail-title">
-            Workflow In motions
+            Workflow in Motion
           </p>
         </div>
         <div className="feat-rail-viewport" ref={viewportRef}>
@@ -2765,22 +2782,24 @@ function Metrics() {
 /* ══ WHO ══ */
 function Who() {
   const cards = [
-    { num: '01', icon: '🏠', imgSrc: 'home_buyers.png', title: 'Home Buyers', text: 'Understand what a home is truly worth before making an offer — with real data, comparable insights, and full transparency.' },
-    { num: '02', icon: '💰', imgSrc: 'home_sellers.png', title: 'Home Sellers', text: 'Price your property accurately, avoid costly mistakes, and attract serious buyers using real market evidence.' },
-    { num: '03', icon: '🤝', imgSrc: 'home_realtors.png', title: 'Realtors', text: 'Generate fast, reliable CMA reports and support clients with transparent, data-driven valuations.' },
-    { num: '04', icon: '📐', imgSrc: 'home_appraisers.png', title: 'Appraisers', text: 'Access structured valuation logic and comprehensive market analysis to support and validate your assessments.' },
+    { num: '01', icon: '🏠', imgSrc: 'home_buyers.png', title: 'Home Buyers', text: 'Understand what a home is truly worth before making an offer — with real data, comparable insights, and full transparency.', tag: 'For buyers' },
+    { num: '02', icon: '💰', imgSrc: 'home_sellers.png', title: 'Home Sellers', text: 'Price your property accurately, avoid costly mistakes, and attract serious buyers using real market evidence.', tag: 'For sellers' },
+    { num: '03', icon: '🤝', imgSrc: 'home_realtors.png', title: 'Realtors', text: 'Generate fast, reliable CMA reports and support clients with transparent, data-driven valuations.', tag: 'For agents' },
+    { num: '04', icon: '📐', imgSrc: 'home_appraisers.png', title: 'Appraisers', text: 'Access structured valuation logic and comprehensive market analysis to support and validate your assessments.', tag: 'For appraisers' },
+    { num: '05', icon: '🏦', imgSrc: 'home_banks.png', title: 'Lenders & Banks', text: 'Leverage transparent, data-driven property valuations to support underwriting, risk assessment, and lending decisions.', tag: 'Coming soon' },
   ];
   return (
     <div className="who-section" id="who">
       <HatchPattern/>
       <div className="who-inner">
         <div className="who-head">
-          <div className="s-tag r">WHO BLUENEST IS FOR</div>
-          <h2 className="s-h2 r d1">Built on Real Expertise.<br/><em>Designed for Everyone in Real Estate.</em></h2>
-          <p className="s-sub r d2">Developed over three years by real estate professionals and technologists, BlueNest brings together appraisal logic, AI-powered analysis, and real market data to deliver accurate, transparent property valuations. Whether you’re buying, selling, advising, or appraising, BlueNest gives you the clarity and confidence to make better real estate decisions.</p>
+          <div className="s-tag r">3 years in the making</div>
+          <h2 className="s-h2 r d1">Built on real expertise.<br/><em>Designed for everyone in real estate.</em></h2>
+          <p className="s-sub r d2">Developed over three years by real estate professionals and technologists, BlueNest brings together appraisal logic, AI-powered analysis, and real market data to deliver accurate, transparent property valuations.</p>
+          <p className="s-sub r d2">Whether you&apos;re buying, selling, advising, or appraising, BlueNest gives you the clarity and confidence to make better real estate decisions.</p>
         </div>
         <div className="who-grid r d3">
-          {cards.map(({ num, icon, imgSrc, title, text }) => (
+          {cards.map(({ num, icon, imgSrc, title, text, tag }) => (
             <div key={num} className="who-card">
               <div className="wc-num">// {num}</div>
               {imgSrc ? (
@@ -2792,6 +2811,7 @@ function Who() {
               )}
               <div className="wc-title">{title}</div>
               <div className="wc-text">{text}</div>
+              <div className="wc-tag">{tag}</div>
             </div>
           ))}
         </div>
@@ -2842,14 +2862,26 @@ function Testimonials() {
 
 /* ══ PRICING ══ */
 function Pricing() {
-  const base = ['3 property analyses / month', 'Basic comparable matching', 'Standard market data', 'PDF CMA export'];
-  const premium = ['Unlimited analyses', 'Smart Property Analysis (vision + 150+ points)', 'Market Pulse & Agent Blue', 'Custom CMA builder', 'Full market intelligence', 'Priority support'];
+  const base = [
+    '3 property analyses / month',
+    'Standard market data',
+    'Basic comparable matching',
+    'PDF CMA export',
+  ];
+  const premium = [
+    'Unlimited analyses',
+    'Smart Property Analysis (vision + 150+ points)',
+    'Market Pulse & Agent Blue',
+    'Full market intelligence',
+    'Custom CMA builder',
+    'Priority support',
+  ];
   return (
     <div className="pricing-section" id="pricing">
       <div className="pricing-inner">
         <div className="pricing-left">
           <div className="s-tag r">Pricing</div>
-          <h2 className="s-h2 r d1">Plans that<br/><em>scale with you.</em></h2>
+          <h2 className="s-h2 r d1">Plans that scale with<br/><em>you.</em></h2>
           <p className="s-sub r d2">Start free. Upgrade when you need vision, automation, and support at volume.</p>
         </div>
         <div className="pricing-right">
@@ -2932,14 +2964,16 @@ function CTAStrip() {
     <div className="cta-section">
       <RadialRings/>
       <div className="cta-inner">
-        <div className="s-tag r" style={{justifyContent:'center',color:'var(--blue)'}}>Next</div>
-        <h2 className="cta-h2 r d1">Put it on<br/><em>your next deal.</em></h2>
+        <h2 className="cta-h2 r d1">Know What a Property Is<br/><em>Actually Worth</em></h2>
         <p className="cta-sub r d2">
-          Walk through with our team or run a pilot in your market — we will map outputs to how you already review risk.
+          BlueNest combines real comparable sales, appraisal-grade valuation logic, and AI-powered analysis to deliver accurate, transparent property valuations — so you can make decisions with confidence.
+        </p>
+        <p className="cta-sub r d2">
+          No estimates. No guesswork. Just real market clarity.
         </p>
         <div className="r d3" style={{display:'flex',gap:'.8rem',justifyContent:'center',flexWrap:'wrap'}}>
-          <a href="#pricing" className="btn-primary">Talk to us <Arrow size={14}/></a>
-          <a href="#features" className="btn-secondary">Product depth</a>
+          <a href="https://app.bluenest.ai" className="btn-primary"><Arrow size={14}/> Try BlueNest</a>
+          <a href="#features" className="btn-secondary"><Arrow size={14}/> Watch Demo</a>
         </div>
       </div>
     </div>
@@ -2993,9 +3027,13 @@ function App() {
     {
       index: '01',
       tag: 'Property Similarity Analysis',
-      title: '150+ data points.<br/><em>True comparables.</em>',
-      desc: 'BlueNest evaluates each property across 150+ real estate data points, combining physical attributes, condition, and market behavior to identify the most accurate comparables and pricing range.',
-      bullets: ['150+ structured data points per property', 'Physical attributes, condition, and market signals unified', 'Comparable set and pricing range you can explain', 'Built for repeatability across markets'],
+      title: 'See What Your Property Is Actually Worth <em>— Instantly</em>',
+      desc: 'Enter your property address and BlueNest identifies truly comparable homes — not just by size or bedrooms, but by renovation, view, and layout. It then analyzes how those properties have performed across sold, active, and failed listings to determine the true market value of your property.',
+      bullets: [
+        'Find Truly Comparable Homes — Go beyond basic filters by matching properties based on renovation, view, and layout — not just size and bedroom count.',
+        'Understand Real Market Value — Analyze how similar homes have actually performed — including what sold and what failed to sell.',
+        'Measure Market Competition — See how competitive the market is right now by evaluating active listings and recent market behavior.',
+      ],
       linkLabel: 'Similarity analysis',
       icon: '🔍', mediaLabel: 'search.gif', gifSrc: 'search.gif', reversed: false,
     },
@@ -3003,26 +3041,36 @@ function App() {
       index: '02',
       tag: 'View & Renovation Detection',
       title: 'What listing photos<br/><em>actually show.</em>',
-      desc: 'Smart Property Analysis reads imagery to classify view, exposure, and renovation level — so condition and quality adjustments reflect what buyers see online, not guesswork.',
+      desc: 'Powered by BlueVision, our first-to-market technology, BlueNest analyzes listing photos to understand view quality, layout, and renovation level — adding a layer of intelligence that traditional valuation methods miss.',
       bullets: ['Renovation and finish signals from listing photos', 'View and exposure classification', 'Condition cues aligned to comp selection', 'Transparent inputs behind every adjustment'],
       linkLabel: 'View & renovation',
       icon: '👁️', mediaLabel: 'results.gif', gifSrc: 'results.gif', reversed: true,
     },
     {
       index: '03',
-      tag: 'Market Pulse',
-      title: 'How the market<br/><em>moves — now.</em>',
-      desc: 'Market Pulse analyzes how the market has performed and how it\'s behaving right now — helping you understand timing, competition, and whether it\'s the right moment to buy or sell.',
-      bullets: ['Recent performance vs. current activity', 'Competition and velocity at a glance', 'Buy vs. sell timing context', 'Clear read on market behavior today'],
-      linkLabel: 'Market Pulse',
+      tag: 'Appraisal-grade CMA',
+      title: 'Generate a Transparent,<br/><em>Appraisal-Grade CMA</em> in Seconds',
+      desc: 'Get a complete Comparable Market Analysis built on real sales, ranked by true similarity, with full transparency into how your property\'s value is determined. No more guessing. No more questioning. Just clear, defensible pricing. The most transparent way to understand a home\'s value — like a Carfax for real estate.',
+      bullets: [
+        'See Exactly How Your Value Is Calculated — No black boxes — every adjustment, comparable, and assumption is clearly shown so you understand how the final price is determined.',
+        'Ranked Comparable Properties by True Similarity — Every comparable is scored based on renovation, view, layout, and overall similarity — so you know which ones truly matter.',
+        'Time & Feature Adjusted Pricing — Sales are adjusted for market timing and property differences, giving you a valuation that reflects today\'s market — not outdated numbers.',
+        'Full Market Breakdown — Analyze sold, active, and failed listings to understand both value and market pressure.',
+      ],
+      linkLabel: 'Generate a CMA',
       icon: '📊', mediaLabel: 'cma.gif', gifSrc: 'cma.gif', reversed: false,
     },
     {
       index: '04',
       tag: 'Agent Blue',
-      title: 'Answers with<br/><em>citations.</em>',
-      desc: 'Plain-language Q&A tied to the comps, Market Pulse, and Smart Property Analysis outputs in your file — not generic market copy.',
-      bullets: ['Explain spreads between similar listings', 'Cross-check Market Pulse with your scenario', 'Street-level renovation and timing questions', 'Which comps belong in the narrative'],
+      title: 'Meet Your<br/><em>AI Property Analyst</em>',
+      desc: 'Agent Blue is a custom-built, agentic AI designed specifically for real estate — able to analyze your property, comparables, and market data to answer complex questions in real time. Unlike traditional chatbots, Agent Blue can reason through your data, evaluate comparable properties, and provide clear, actionable insights tailored to your property. Get instant answers, deeper insights, and the confidence to make smarter real estate decisions. Agent Blue is a custom-built, agentic AI that goes beyond chat — actively analyzing your property, comparables, and market data to deliver real-time, property-specific insights.',
+      bullets: [
+        'Why did a similar property sell for more or less than mine?',
+        'If I renovate, how much could my property be worth?',
+        'How does my home compare to others in the building or neighborhood?',
+        'What are the key factors driving value in this area?',
+      ],
       linkLabel: 'Agent Blue',
       icon: '🤖', mediaLabel: 'agent.png', gifSrc: 'agent.png', reversed: true,
     },
