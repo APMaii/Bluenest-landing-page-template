@@ -110,7 +110,7 @@
 </footer>
 
 <script type="text/babel">
-const { useEffect, useRef } = React;
+const { useEffect, useRef, useState } = React;
 
 const TEAM = [
   {
@@ -366,11 +366,11 @@ function StorySection() {
   );
 }
 
-function TeamCard({ member, revealIndex }) {
+function TeamCard({ member, revealIndex, isOpen, onToggle }) {
   const { name, role, description, img, social, bioSide } = member;
   return (
     <div
-      className={`about-team-item about-team-item--${bioSide}`}
+      className={`about-team-item about-team-item--${bioSide}${isOpen ? ' is-open' : ''}`}
       data-reveal
       style={{ transitionDelay: `${0.06 + revealIndex * 0.07}s` }}
     >
@@ -385,10 +385,23 @@ function TeamCard({ member, revealIndex }) {
           <p className="about-team-card__role">{role}</p>
           <div className="about-team-card__socials">
             <SocialRollout social={social} />
+            <button
+              type="button"
+              className="about-team-card__toggle"
+              onClick={onToggle}
+              aria-expanded={isOpen}
+              aria-controls={`team-bio-${name.toLowerCase()}`}
+            >
+              {isOpen ? 'Read less' : 'Read more'}
+            </button>
           </div>
         </div>
       </article>
-      <aside className="about-team-bio-card" aria-hidden="true">
+      <aside
+        id={`team-bio-${name.toLowerCase()}`}
+        className="about-team-bio-card"
+        aria-hidden={!isOpen}
+      >
         <h4 className="about-team-bio-card__title">{name}</h4>
         <p className="about-team-bio-card__text">{description}</p>
       </aside>
@@ -397,6 +410,10 @@ function TeamCard({ member, revealIndex }) {
 }
 
 function TeamSection() {
+  const [openMobileCard, setOpenMobileCard] = useState(null);
+  const handleToggle = (name) => {
+    setOpenMobileCard((prev) => (prev === name ? null : name));
+  };
   return (
     <section className="about-team" aria-labelledby="team-heading">
       <div className="about-team__glow" aria-hidden="true" />
@@ -421,7 +438,13 @@ function TeamSection() {
         </div>
         <div className="about-team__grid">
           {TEAM.map((m, i) => (
-            <TeamCard key={m.name} member={m} revealIndex={i} />
+            <TeamCard
+              key={m.name}
+              member={m}
+              revealIndex={i}
+              isOpen={openMobileCard === m.name}
+              onToggle={() => handleToggle(m.name)}
+            />
           ))}
         </div>
         <div className="about-story__wrap" style={{ marginTop: '3rem' }} data-reveal>

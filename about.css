@@ -382,28 +382,18 @@
 @media (max-width: 600px) {
   .about-team__grid {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 5%;
+    overflow: visible;
     padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .about-team__grid::-webkit-scrollbar {
-    height: 4px;
-  }
-  .about-team__grid::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 4px;
   }
   .about-team-card {
-    flex: 0 0 min(88vw, 360px);
-    scroll-snap-align: center;
+    flex: none;
+    width: 100%;
   }
   .about-team-item {
-    flex: 0 0 min(88vw, 360px);
-    scroll-snap-align: center;
+    flex: none;
+    width: 100%;
   }
 }
 
@@ -603,6 +593,10 @@
   margin-bottom: 0.85rem;
 }
 
+.about-team-card__toggle {
+  display: none;
+}
+
 .about-team-bio-card {
   position: absolute;
   top: 0;
@@ -660,10 +654,76 @@
   color: var(--muted);
 }
 
+@media (max-width: 768px) {
+  .about-team__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow: visible;
+  }
+  .about-team-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transform: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  .about-team-item:hover .about-team-card,
+  .about-team-item:focus-within .about-team-card {
+    transform: none;
+  }
+  .about-team-card__socials {
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+  .about-social-bundle {
+    min-width: 0;
+  }
+  .about-team-card__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 0.45rem 0.72rem;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--off);
+    color: var(--ink);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: auto;
+  }
+  .about-team-bio-card {
+    position: static;
+    width: 100%;
+    height: auto;
+    max-height: 0;
+    margin-top: 0;
+    padding: 0 0.95rem;
+    border-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    transform: none !important;
+    transition: max-height 0.38s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s ease, padding 0.25s ease, margin-top 0.25s ease, border-width 0.2s ease;
+  }
+  .about-team-item.is-open .about-team-bio-card {
+    max-height: 420px;
+    margin-top: 0.72rem;
+    padding: 0.95rem 0.95rem;
+    border-width: 1px;
+    opacity: 1;
+  }
+}
+
 .about-team-card__socials {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  gap: 0.55rem;
   min-height: 42px;
   margin-top: 0.9rem;
 }
