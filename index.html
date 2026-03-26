@@ -9,7 +9,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.2/babel.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -54,7 +54,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   background: var(--page-bg);
   color: var(--ink);
   overflow-x: hidden;
@@ -117,7 +117,7 @@ a { text-decoration: none; color: inherit; }
 .nav-right { display: flex; align-items: center; gap: .7rem; }
 .btn-nav-ghost {
   padding: .48rem 1.1rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: .82rem; font-weight: 600; color: var(--muted);
   cursor: pointer; transition: color .2s; border-radius: 8px;
 }
@@ -128,7 +128,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--blue); color: var(--white);
   border-radius: 8px; font-size: .82rem; font-weight: 700;
   letter-spacing: -.01em; cursor: pointer;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   transition: all .25s;
   box-shadow: 0 1px 3px rgba(20, 88, 184, .2), 0 4px 14px rgba(20, 88, 184, .12);
 }
@@ -401,7 +401,7 @@ a { text-decoration: none; color: inherit; }
   font-size: .7rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 1.5rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   animation: fadeUp .6s ease both;
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 20px rgba(6, 26, 51, .04);
@@ -424,7 +424,7 @@ a { text-decoration: none; color: inherit; }
 @keyframes pip { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.5)} }
 
 .hero-h1 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.6rem, 5.4vw, 4.35rem);
   font-weight: 900; line-height: 1.22; letter-spacing: -.04em;
   color: var(--ink);
@@ -488,7 +488,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 4px 20px rgba(20, 88, 184, .08);
 }
 .hero-pill strong {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-weight: 800;
   font-size: .82rem;
   color: var(--ink);
@@ -510,7 +510,7 @@ a { text-decoration: none; color: inherit; }
   letter-spacing: -.02em; cursor: pointer;
   transition: all .3s cubic-bezier(.4,0,.2,1);
   box-shadow: 0 2px 0 rgba(15, 60, 130, .35), 0 8px 24px rgba(20, 88, 184, .2);
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 .btn-primary:hover {
   background: var(--gold);
@@ -526,7 +526,7 @@ a { text-decoration: none; color: inherit; }
   border: 1px solid var(--border); border-radius: 10px;
   font-size: .9rem; font-weight: 600; cursor: pointer;
   transition: all .25s; letter-spacing: -.01em;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
 }
 .btn-secondary:hover { background: var(--sand); border-color: rgba(20, 88, 184, .22); }
 
@@ -582,7 +582,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-workflow-side strong { color: var(--ink); font-weight: 600; }
 .hero-wf-side-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: .92rem;
   font-weight: 700;
   letter-spacing: -.02em;
@@ -607,7 +607,7 @@ a { text-decoration: none; color: inherit; }
   transition: width .12s linear;
 }
 .hero-wf-progress-label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .55rem;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -661,7 +661,7 @@ button.hero-wf-step {
   border-radius: 5px;
   background: var(--sand);
   border: 1px solid var(--border);
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .52rem;
   font-weight: 600;
   display: flex;
@@ -697,7 +697,7 @@ button.hero-wf-step {
   line-height: 1.4;
 }
 .hero-wf-cma-ready {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -.03em;
@@ -725,7 +725,7 @@ button.hero-wf-step {
   padding: 0;
   border: none;
   background: none;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .58rem;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -761,7 +761,7 @@ button.hero-wf-step {
   background: rgba(255,255,255,.94);
   border: 1px solid var(--border);
   border-radius: 10px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: .9rem;
   font-weight: 700;
   color: var(--ink);
@@ -895,7 +895,7 @@ button.hero-wf-step {
 .gif-urlbar {
   flex: 1; background: var(--off); border: 1px solid var(--border);
   border-radius: 6px; padding: .28rem 1rem;
-  font-family: 'DM Mono', monospace; font-size: .7rem;
+  font-family: 'DM Sans', monospace; font-size: .7rem;
   color: var(--muted); text-align: center;
   display: flex; align-items: center; justify-content: center; gap: .4rem;
 }
@@ -907,7 +907,7 @@ button.hero-wf-step {
 }
 .gif-status {
   display: flex; align-items: center; gap: .4rem;
-  font-family: 'DM Mono', monospace; font-size: .7rem; color: var(--muted);
+  font-family: 'DM Sans', monospace; font-size: .7rem; color: var(--muted);
 }
 .gif-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #C9941C; animation: pip 2s infinite; }
 
@@ -931,7 +931,7 @@ button.hero-wf-step {
   box-shadow: 0 4px 20px rgba(0,0,0,.06);
 }
 .gif-ph-label {
-  font-family: 'DM Mono', monospace; font-size: .8rem;
+  font-family: 'DM Sans', monospace; font-size: .8rem;
   color: rgba(0,0,0,.2); letter-spacing: .06em;
 }
 /* float overlays on gif */
@@ -956,7 +956,7 @@ button.hero-wf-step {
 }
 .gif-float-badge.blue { background: var(--blue); box-shadow: 0 0 6px rgba(20, 88, 184, .45); }
 .gif-float-badge.orange { background: var(--orange); box-shadow: 0 0 6px rgba(224, 112, 21, .45); }
-.gif-float-title { font-weight: 700; color: var(--ink); font-family: 'Plus Jakarta Sans', sans-serif; }
+.gif-float-title { font-weight: 700; color: var(--ink); font-family: 'DM Sans', sans-serif; }
 .gif-float-sub { font-size: .72rem; color: var(--muted); margin-top: .1rem; }
 
 /* ══════════════════════════════════════
@@ -975,7 +975,7 @@ button.hero-wf-step {
   flex-wrap: wrap;
 }
 .logos-label {
-  flex-shrink: 0; font-family: 'DM Mono', monospace;
+  flex-shrink: 0; font-family: 'DM Sans', monospace;
   font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
   color: var(--muted);
 }
@@ -988,7 +988,7 @@ button.hero-wf-step {
   border: 1px solid rgba(20, 88, 184, .2);
   background: rgba(255, 255, 255, .9);
   color: var(--blue);
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .56rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -1009,7 +1009,7 @@ button.hero-wf-step {
   100% { transform: translateX(-50%); }
 }
 .logos-track span {
-  font-family: 'Fraunces', serif; font-size: .9rem; font-weight: 700;
+  font-family: 'Playfair Display', serif; font-size: .9rem; font-weight: 700;
   color: rgba(12, 39, 68, .2); letter-spacing: -.02em;
   white-space: nowrap; cursor: default;
   transition: color .3s ease;
@@ -1023,13 +1023,13 @@ button.hero-wf-step {
 .s-inner { max-width: 1100px; margin: 0 auto; }
 .s-tag {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--blue); margin-bottom: 1rem;
 }
 .s-tag::before { content: '→'; font-size: .75rem; }
 .s-h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 900; letter-spacing: -.04em; line-height: 1.06;
   color: var(--ink); margin-bottom: 1rem;
@@ -1053,7 +1053,7 @@ button.hero-wf-step {
 .feat-copy .s-tag { margin-bottom: .85rem; }
 .feat-index {
   display: block;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .68rem;
   letter-spacing: .28em;
   color: rgba(20, 88, 184, .35);
@@ -1061,7 +1061,7 @@ button.hero-wf-step {
   font-weight: 500;
 }
 .feat-copy h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2rem, 3.5vw, 2.9rem);
   font-weight: 900; letter-spacing: -.04em; line-height: 1.06;
   color: var(--ink); margin-bottom: 1rem;
@@ -1084,7 +1084,7 @@ button.hero-wf-step {
   display: inline-flex; align-items: center; gap: .5rem;
   font-size: .85rem; font-weight: 700; color: var(--ink);
   cursor: pointer; transition: all .2s;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   position: relative;
 }
 .feat-link::after {
@@ -1120,7 +1120,7 @@ button.hero-wf-step {
 }
 .feat-media-ph-ico { font-size: 4rem; }
 .feat-media-ph span {
-  font-family: 'DM Mono', monospace; font-size: .72rem;
+  font-family: 'DM Sans', monospace; font-size: .72rem;
   letter-spacing: .06em;
 }
 .feat-media-badge {
@@ -1129,7 +1129,7 @@ button.hero-wf-step {
   backdrop-filter: blur(10px);
   border: 1px solid var(--border);
   border-radius: 6px; padding: .28rem .7rem;
-  font-family: 'DM Mono', monospace; font-size: .65rem;
+  font-family: 'DM Sans', monospace; font-size: .65rem;
   color: var(--muted); letter-spacing: .07em; text-transform: uppercase;
   z-index: 2;
 }
@@ -1180,7 +1180,7 @@ button.hero-wf-step {
   margin-bottom: 1rem;
 }
 .feat-rail-kicker {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .65rem;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -1188,7 +1188,7 @@ button.hero-wf-step {
   margin-bottom: .45rem;
 }
 .feat-rail-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.05rem, 1.65vw, 1.4rem);
   font-weight: 600;
   letter-spacing: -.02em;
@@ -1302,7 +1302,7 @@ button.hero-wf-step {
 .feat-rail-phone-badge {
   display: block;
   text-align: center;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .55rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -1471,7 +1471,7 @@ button.hero-wf-step {
   transform: scale(1.15);
 }
 .feat-rail-tick-num {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .62rem;
   letter-spacing: .12em;
   color: rgba(12, 39, 68, .38);
@@ -1483,7 +1483,7 @@ button.hero-wf-step {
 }
 .feat-rail-hint {
   text-align: center;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .6rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -1532,7 +1532,7 @@ button.hero-wf-step {
   display: inline-flex;
   align-items: center;
   gap: .65rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .68rem;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -1550,7 +1550,7 @@ button.hero-wf-step {
   background: linear-gradient(90deg, rgba(201, 148, 28, .45), transparent);
 }
 .bn-diff-h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.75rem, 4.2vw, 2.65rem);
   font-weight: 900;
   letter-spacing: -.035em;
@@ -1598,7 +1598,7 @@ button.hero-wf-step {
   transform: translateY(-2px);
 }
 .bn-diff-card__n {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 900;
   line-height: 1;
@@ -1610,7 +1610,7 @@ button.hero-wf-step {
   pointer-events: none;
 }
 .bn-diff-card__label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .58rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -1618,7 +1618,7 @@ button.hero-wf-step {
   margin: 0 0 .5rem;
 }
 .bn-diff-card__title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.05rem;
   font-weight: 800;
   letter-spacing: -.02em;
@@ -1648,7 +1648,7 @@ button.hero-wf-step {
   gap: .35rem;
 }
 .bn-diff-card__chips li {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .58rem;
   letter-spacing: .06em;
   text-transform: uppercase;
@@ -1751,13 +1751,13 @@ button.hero-wf-step {
   font-size: 1.3rem; margin-bottom: 1rem;
 }
 .wc-title {
-  font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 700;
+  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
   letter-spacing: -.03em; color: var(--ink); margin-bottom: .4rem;
 }
 .wc-text { font-size: .83rem; color: var(--muted); line-height: 1.65; }
 .wc-tag {
   display: inline-flex; align-items: center;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
   color: var(--blue); margin-top: 1rem;
 }
@@ -1800,7 +1800,7 @@ button.hero-wf-step {
   background: linear-gradient(135deg, var(--orange), var(--gold));
   display: flex; align-items: center; justify-content: center;
   font-size: .72rem; font-weight: 800; color: var(--white);
-  font-family: 'Plus Jakarta Sans', sans-serif; flex-shrink: 0;
+  font-family: 'DM Sans', sans-serif; flex-shrink: 0;
 }
 .testi-name { font-size: .82rem; font-weight: 700; color: var(--ink); line-height: 1.2; }
 .testi-role { font-size: .74rem; color: var(--muted); }
@@ -1868,19 +1868,19 @@ button.hero-wf-step {
 }
 .p-card.featured:hover { box-shadow: 0 24px 60px rgba(6, 26, 51, .45); }
 .p-tier {
-  font-family: 'DM Mono', monospace; font-size: .68rem;
+  font-family: 'DM Sans', monospace; font-size: .68rem;
   letter-spacing: .12em; text-transform: uppercase;
   color: var(--muted); margin-bottom: .9rem;
 }
 .p-card.featured .p-tier { color: rgba(255,255,255,.35); }
 .p-amount {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.35rem, 3.5vw, 3rem);
   font-weight: 900; letter-spacing: -.04em;
   color: var(--ink); line-height: 1; margin-bottom: .25rem;
 }
 .p-card.featured .p-amount { color: var(--white); }
-.p-amount small { font-size: 1rem; font-weight: 400; color: var(--muted); font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: 0; }
+.p-amount small { font-size: 1rem; font-weight: 400; color: var(--muted); font-family: 'DM Sans', sans-serif; letter-spacing: 0; }
 .p-card.featured .p-amount small { color: rgba(255,255,255,.35); }
 .p-desc {
   font-size: .82rem;
@@ -1917,7 +1917,7 @@ button.hero-wf-step {
   display: flex; align-items: center; justify-content: center;
   width: 100%; padding: .78rem; border-radius: 10px;
   font-size: .87rem; font-weight: 700; cursor: pointer; transition: all .25s;
-  font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -.01em;
+  font-family: 'DM Sans', sans-serif; letter-spacing: -.01em;
 }
 .p-btn-ghost { background: var(--off); border: 1px solid var(--border); color: var(--ink); }
 .p-btn-ghost:hover { background: var(--sand); border-color: rgba(0,0,0,.12); }
@@ -1939,7 +1939,7 @@ button.hero-wf-step {
 }
 .faq-left .s-tag { color: rgba(201, 148, 28, .95); }
 .faq-left h2 {
-  font-family: 'Fraunces', serif; font-size: clamp(2rem, 3.5vw, 2.9rem);
+  font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3.5vw, 2.9rem);
   font-weight: 900; letter-spacing: -.04em; color: var(--white); line-height: 1.06; margin-bottom: 1rem;
 }
 .faq-left h2 em { font-style: italic; color: rgba(255,255,255,.35); font-weight: 700; }
@@ -2090,7 +2090,7 @@ button.hero-wf-step {
 }
 .cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
 .cta-h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.8rem, 5.5vw, 4.8rem);
   font-weight: 900; letter-spacing: -.04em;
   color: var(--ink); line-height: .98; margin-bottom: 1.2rem;
@@ -2180,7 +2180,7 @@ button.hero-wf-step {
   text-transform: uppercase;
   color: rgba(255, 255, 255, .38);
   margin-bottom: 1rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
 }
 .footer-col a {
   display: block;
@@ -2206,7 +2206,7 @@ button.hero-wf-step {
 .f-copy {
   font-size: .72rem;
   color: rgba(255, 255, 255, .32);
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   letter-spacing: .02em;
   margin: 0;
 }
@@ -2231,9 +2231,9 @@ button.hero-wf-step {
   flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem;
 }
 .mob-overlay.open { display: flex; }
-.mob-overlay a { font-family: 'Fraunces', serif; font-size: 2.2rem; font-weight: 900; color: var(--ink); letter-spacing: -.04em; cursor: pointer; transition: color .15s; }
+.mob-overlay a { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--ink); letter-spacing: -.04em; cursor: pointer; transition: color .15s; }
 .mob-overlay a:hover { color: var(--blue); }
-.mob-close { margin-top: 1rem; font-size: .75rem; color: var(--muted); background: none; border: none; cursor: pointer; font-family: 'DM Mono', monospace; letter-spacing: .12em; }
+.mob-close { margin-top: 1rem; font-size: .75rem; color: var(--muted); background: none; border: none; cursor: pointer; font-family: 'DM Sans', monospace; letter-spacing: .12em; }
 
 @media (max-width: 960px) {
   .nav-links { display: none; }
@@ -2928,7 +2928,7 @@ function FeatureSlide({ tag, title, desc, bullets, linkLabel, icon, gifSrc, medi
         {index ? <span className={`feat-index ${rc}`}>{index}</span> : null}
         <div className={`s-tag ${rc}`}>{tag}</div>
         <h2 className={`${rc} d1`} dangerouslySetInnerHTML={{ __html: title }}
-          style={{fontFamily:"'Fraunces',serif",fontSize:'clamp(2rem,3.5vw,2.9rem)',fontWeight:900,letterSpacing:'-.04em',lineHeight:1.06,color:'var(--ink)',marginBottom:'1rem'}}/>
+          style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(2rem,3.5vw,2.9rem)',fontWeight:900,letterSpacing:'-.04em',lineHeight:1.06,color:'var(--ink)',marginBottom:'1rem'}}/>
         <p className={`${rc} d2`}>{desc}</p>
         <div className={`feat-bullets ${rc} d3`}>
           {bullets.map((b, i) => (
@@ -2991,7 +2991,7 @@ function FeatureRailCopyPanel({ tag, title, desc, bullets, linkLabel, index }) {
               <div className="s-tag r">{tag}</div>
             </div>
             <h2 className="r d1" dangerouslySetInnerHTML={{ __html: title }}
-              style={{fontFamily:"'Fraunces',serif",fontWeight:900,letterSpacing:'-.04em',lineHeight:1.06,marginBottom:'.75rem'}}/>
+              style={{fontFamily:"'Playfair Display',serif",fontWeight:900,letterSpacing:'-.04em',lineHeight:1.06,marginBottom:'.75rem'}}/>
             <p className="r d2">{desc}</p>
             <div className="feat-bullets r d3">
               {bullets.map((b, i) => (
@@ -3403,7 +3403,7 @@ function FAQ() {
       <div className="faq-inner">
         <div className="faq-left">
           <div className="s-tag r">FAQ</div>
-          <h2 className="r d1" style={{fontFamily:"'Fraunces',serif",fontSize:'clamp(2rem,3.5vw,2.9rem)',fontWeight:900,letterSpacing:'-.04em',color:'var(--white)',lineHeight:1.06,marginBottom:'1rem'}}>
+          <h2 className="r d1" style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(2rem,3.5vw,2.9rem)',fontWeight:900,letterSpacing:'-.04em',color:'var(--white)',lineHeight:1.06,marginBottom:'1rem'}}>
             Questions,<br/><em style={{fontStyle:'italic',color:'rgba(255,255,255,.3)'}}>answered.</em>
           </h2>
           <p className="r d2" style={{fontSize:'.9rem',color:'rgba(255,255,255,.4)',lineHeight:1.7}}>

@@ -426,14 +426,19 @@ a { text-decoration: none; color: inherit; }
 .hero-h1 {
   font-family: 'Fraunces', serif;
   font-size: clamp(2.6rem, 5.4vw, 4.35rem);
-  font-weight: 900; line-height: .98; letter-spacing: -.04em;
+  font-weight: 900; line-height: 1.22; letter-spacing: -.04em;
   color: var(--ink);
   margin-bottom: 1.5rem;
+  padding-bottom: .08em;
   max-width: 900px;
   margin-left: auto; margin-right: auto;
   animation: fadeUp .7s .08s ease both;
+  overflow: visible;
 }
-.hero-h1 .hero-line { display: block; }
+.hero-h1 .hero-line {
+  display: block;
+  overflow: visible;
+}
 .hero-h1 .hero-gradient {
   display: block;
   margin-top: .1em;
@@ -1245,11 +1250,11 @@ button.hero-wf-step {
 .feat-rail-half-inner--copy {
   align-items: center;
 }
-/* Shared square frame — media + copy use identical size (fixes tiny video in tall viewport) */
+/* Base frame */
 .feat-rail-square {
   --rail-sz: min(
     calc(var(--rail-vw, 100vw) / 2 - 1.25rem),
-    min(68vmin, min(70vh, 560px))
+    min(66vmin, min(66vh, 540px))
   );
   width: var(--rail-sz);
   height: var(--rail-sz);
@@ -1260,6 +1265,12 @@ button.hero-wf-step {
   overflow: hidden;
 }
 .feat-rail-square--media {
+  --rail-media-w: min(
+    calc(var(--rail-vw, 100vw) / 2 - 1.25rem),
+    min(78vmin, min(72vh, 680px))
+  );
+  width: var(--rail-media-w);
+  height: calc(var(--rail-media-w) * 0.62);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, .1),
     0 12px 40px rgba(12, 39, 68, .22);
@@ -1333,7 +1344,7 @@ button.hero-wf-step {
   max-height: none;
   border-radius: inherit;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -1379,18 +1390,18 @@ button.hero-wf-step {
   color: rgba(255, 255, 255, .35);
 }
 .feat-rail-copy-card .feat-copy > p {
-  font-size: .88rem;
-  line-height: 1.75;
-  margin-bottom: 1rem;
+  font-size: .8rem;
+  line-height: 1.55;
+  margin-bottom: .65rem;
   color: var(--muted);
 }
 .feat-rail-copy-card .feat-bullets {
-  margin-bottom: 1rem;
-  gap: .35rem;
+  margin-bottom: .6rem;
+  gap: .25rem;
 }
 .feat-rail-copy-card .feat-bullet {
-  font-size: .8rem;
-  line-height: 1.5;
+  font-size: .72rem;
+  line-height: 1.35;
   color: rgba(12, 39, 68, .62);
 }
 [data-theme="dark"] .feat-rail-copy-card .feat-bullet {
@@ -2255,6 +2266,10 @@ button.hero-wf-step {
     height: min(calc(100vw - 2.5rem), min(88vmin, 400px));
     max-width: 100%;
   }
+  .feat-rail-square--media {
+    width: min(calc(100vw - 2.5rem), 540px);
+    height: min(calc((100vw - 2.5rem) * 0.62), 335px);
+  }
   .feat-rail-phone,
   .feat-rail-phone-chrome {
     min-height: 0;
@@ -2379,6 +2394,10 @@ button.hero-wf-step {
   .feat-rail-square {
     width: min(calc(100vw - 2.5rem), min(88vmin, 380px));
     height: min(calc(100vw - 2.5rem), min(88vmin, 380px));
+  }
+  .feat-rail-square--media {
+    width: min(calc(100vw - 2.5rem), 520px);
+    height: min(calc((100vw - 2.5rem) * 0.62), 320px);
   }
   .feat-rail-phone,
   .feat-rail-phone-chrome {
@@ -3275,12 +3294,12 @@ function Who() {
 /* ══ TESTIMONIALS ══ */
 function Testimonials() {
   const cards = [
-    { text: 'BlueNest cut our CMA prep from 3 hours to 20 minutes. The vision analysis caught a bathroom renovation I missed in my own walkthrough.', name: 'Sarah M.', role: 'Senior Realtor, SF Bay Area', init: 'SM' },
-    { text: 'As a licensed appraiser I was skeptical. The comparable scoring logic actually mirrors the adjustments I make manually — just 10× faster.', name: 'James K.', role: 'Certified Appraiser, LA', init: 'JK' },
-    { text: 'Used BlueNest before making an offer. The AI found comps our agent missed and we negotiated $40k off asking price.', name: 'Rachel & Tom D.', role: 'Home Buyers, Austin TX', init: 'RT' },
-    { text: "Agent Blue answered every market question in plain English. It's like having a data analyst on call 24/7.", name: 'Marcus L.', role: 'Realtor, Miami Beach', init: 'ML' },
-    { text: 'The renovation detection alone is worth the subscription. Smart Property Analysis priced a fully renovated kitchen automatically from photos.', name: 'Priya N.', role: 'Real Estate Investor', init: 'PN' },
-    { text: "Best CMA tool in 15 years. Clients ask 'how did you do that?' — it makes me look incredible.", name: 'David O.', role: 'Broker, New York City', init: 'DO' },
+    { text: 'BlueNest made my CMA process feel calm again. I can pull strong comps in minutes and spend more time actually advising my Vancouver clients.', name: 'Sarah M.', role: 'Realtor, Vancouver BC', init: 'SM' },
+    { text: 'Market Pulse helps me explain pricing with confidence. Clients can clearly see what is happening in Vancouver instead of just hearing a guess.', name: 'James K.', role: 'Licensed Appraiser, Vancouver BC', init: 'JK' },
+    { text: 'We used BlueNest before submitting an offer in East Vancouver. The CMA and Market Pulse data helped us negotiate with less stress.', name: 'Rachel & Tom D.', role: 'Home Buyers, Vancouver BC', init: 'RT' },
+    { text: 'Blue Agent feels like a thoughtful teammate. I ask questions in plain language and get clear answers I can use right away with clients.', name: 'Marcus L.', role: 'Realtor, Vancouver BC', init: 'ML' },
+    { text: 'Workflow Results keeps my week organized. Follow-ups, property notes, and CMA prep are all in one place, so nothing slips through.', name: 'Priya N.', role: 'Real Estate Investor, Vancouver BC', init: 'PN' },
+    { text: 'BlueNest is built for real estate, and it shows. CMA, Market Pulse, Blue Agent, and Workflow Results together save me hours every week.', name: 'David O.', role: 'Broker, Vancouver BC', init: 'DO' },
   ];
   const doubled = [...cards, ...cards];
   return (
