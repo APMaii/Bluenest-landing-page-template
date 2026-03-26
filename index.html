@@ -426,14 +426,19 @@ a { text-decoration: none; color: inherit; }
 .hero-h1 {
   font-family: 'Fraunces', serif;
   font-size: clamp(2.6rem, 5.4vw, 4.35rem);
-  font-weight: 900; line-height: .98; letter-spacing: -.04em;
+  font-weight: 900; line-height: 1.22; letter-spacing: -.04em;
   color: var(--ink);
   margin-bottom: 1.5rem;
+  padding-bottom: .08em;
   max-width: 900px;
   margin-left: auto; margin-right: auto;
   animation: fadeUp .7s .08s ease both;
+  overflow: visible;
 }
-.hero-h1 .hero-line { display: block; }
+.hero-h1 .hero-line {
+  display: block;
+  overflow: visible;
+}
 .hero-h1 .hero-gradient {
   display: block;
   margin-top: .1em;
@@ -1249,7 +1254,7 @@ button.hero-wf-step {
 .feat-rail-square {
   --rail-sz: min(
     calc(var(--rail-vw, 100vw) / 2 - 1.25rem),
-    min(72vmin, min(74vh, 620px))
+    min(66vmin, min(66vh, 540px))
   );
   width: var(--rail-sz);
   height: var(--rail-sz);
