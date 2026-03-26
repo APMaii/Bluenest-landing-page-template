@@ -37,7 +37,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, sans-serif;
   background: var(--page-bg);
   color: var(--ink);
   overflow-x: hidden;
@@ -83,7 +83,7 @@ a { text-decoration: none; color: inherit; }
 .nav-right { display: flex; align-items: center; gap: .7rem; }
 .btn-nav-ghost {
   padding: .48rem 1.1rem;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: .82rem; font-weight: 600; color: var(--muted);
   cursor: pointer; transition: color .2s; border-radius: 8px;
 }
@@ -94,7 +94,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--blue); color: var(--white);
   border-radius: 8px; font-size: .82rem; font-weight: 700;
   letter-spacing: -.01em; cursor: pointer;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   transition: all .25s;
   box-shadow: 0 1px 3px rgba(20, 88, 184, .2), 0 4px 14px rgba(20, 88, 184, .12);
 }
@@ -180,13 +180,13 @@ a { text-decoration: none; color: inherit; }
 .s-inner { max-width: 1100px; margin: 0 auto; }
 .s-tag {
   display: inline-flex; align-items: center; gap: .5rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .68rem; letter-spacing: .12em; text-transform: uppercase;
   color: var(--blue); margin-bottom: 1rem;
 }
 .s-tag::before { content: '→'; font-size: .75rem; }
 .s-h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 900; letter-spacing: -.04em; line-height: 1.06;
   color: var(--ink); margin-bottom: 1rem;
@@ -215,7 +215,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 8px 40px rgba(0, 0, 0, .25);
 }
 .card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -.03em;
@@ -232,7 +232,7 @@ a { text-decoration: none; color: inherit; }
   align-items: start;
 }
 .contact-card .label {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: .65rem;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -243,7 +243,7 @@ a { text-decoration: none; color: inherit; }
 .contact-card a:hover { color: var(--orange); }
 
 .contact-form-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -.03em;
@@ -324,7 +324,7 @@ a { text-decoration: none; color: inherit; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item summary::after {
   content: '+';
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: 1.1rem;
   color: var(--blue);
   flex-shrink: 0;
@@ -410,7 +410,7 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   color: rgba(255, 255, 255, .38);
   margin-bottom: 1rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
 }
 .footer-col a {
   display: block;
@@ -436,7 +436,7 @@ a { text-decoration: none; color: inherit; }
 .f-copy {
   font-size: .72rem;
   color: rgba(255, 255, 255, .32);
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   letter-spacing: .02em;
   margin: 0;
 }
@@ -449,7 +449,7 @@ a { text-decoration: none; color: inherit; }
 }
 .mob-overlay.open { display: flex; }
 .mob-overlay a {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.65rem;
   font-weight: 900;
   color: var(--ink);
@@ -466,7 +466,7 @@ a { text-decoration: none; color: inherit; }
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   letter-spacing: .12em;
 }
 [data-theme="dark"] .mob-overlay {
@@ -589,7 +589,7 @@ a { text-decoration: none; color: inherit; }
   text-align: left;
 }
 .contact-hero__eyebrow {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -599,7 +599,7 @@ a { text-decoration: none; color: inherit; }
   animation: contact-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
 }
 .contact-hero__title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(2.6rem, 6vw, 4rem);
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -684,7 +684,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 12px 36px rgba(20, 88, 184, 0.1);
 }
 .contact-kpi__val {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -705,7 +705,7 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto;
 }
 .contact-section-title {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.35rem, 2.5vw, 1.65rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -791,7 +791,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 8px 36px rgba(0, 0, 0, 0.25);
 }
 .contact-steps h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -820,7 +820,7 @@ a { text-decoration: none; color: inherit; }
   width: 1.65rem;
   height: 1.65rem;
   border-radius: 8px;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: 0.65rem;
   font-weight: 600;
   display: flex;
@@ -844,7 +844,7 @@ a { text-decoration: none; color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -852,7 +852,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 0.5rem;
 }
 .contact-map-head h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.35rem, 2.2vw, 1.65rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -891,7 +891,7 @@ a { text-decoration: none; color: inherit; }
   color: var(--orange);
 }
 .contact-coords {
-  font-family: 'DM Mono', monospace;
+  font-family: 'DM Sans', monospace;
   font-size: 0.68rem;
   color: var(--muted);
   opacity: 0.85;
@@ -920,7 +920,7 @@ a { text-decoration: none; color: inherit; }
   margin-bottom: 1.5rem;
 }
 .contact-glass__head h2 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(1.45rem, 2.5vw, 1.75rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -1139,7 +1139,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 22px 56px rgba(0, 0, 0, 0.55);
 }
 .visit-card h3 {
-  font-family: 'Fraunces', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.03em;
