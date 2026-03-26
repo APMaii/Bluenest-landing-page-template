@@ -114,9 +114,12 @@ const { useEffect, useRef } = React;
 
 const TEAM = [
   {
-    name: 'Yashar',
+    name: 'Yashar Yousef',
     role: 'CEO & Founder',
+    description:
+      "Blunest was founded by Yashar Yousef, who pivoted from his medical doctorate to join Evo Payments during its growth to a major Nasdaq IPO, where his mentor Ray Sidhom inspired his passion for transformative technology. Later, as a licensed real estate agent and investor, Yashar identified the critical blind spot in property valuations. Bluenest is the result: a platform that combines real estate expertise with AI to finally capture the nuanced factors that determine a property's true value.",
     img: 'Yashar.jpg',
+    bioSide: 'right',
     social: [
       { href: '#', label: 'LinkedIn', Icon: IconLinkedIn },
       { href: '#', label: 'X', Icon: IconX },
@@ -124,9 +127,12 @@ const TEAM = [
     ],
   },
   {
-    name: 'Chris',
+    name: 'Chris Truese',
     role: 'CTO & Co-founder',
+    description:
+      "As a visionary entrepreneur and technology strategist with a strong foundation in artificial intelligence and agentic AI, Chris Truese co-founded Bluenest, bringing over 15 years of experience bridging business and evolving technologies. He has a proven ability to drive digital transformation and streamline operations. His forward-thinking leadership and commitment to innovation have enabled him to support Yashar in their vision to modernize the PropTech industry.",
     img: 'Chris.jpg',
+    bioSide: 'right',
     social: [
       { href: '#', label: 'LinkedIn', Icon: IconLinkedIn },
       { href: '#', label: 'X', Icon: IconX },
@@ -134,9 +140,12 @@ const TEAM = [
     ],
   },
   {
-    name: 'Ali',
+    name: 'Ali Pilehvar Meibody',
     role: 'Founder Developer',
+    description:
+    "Ali has contributed to advanced research projects at EPFL (Switzerland) and Politecnico di Torino (Italy), focusing on the co-design of software and hardware for neuromorphic devices tailored to spiking neural networks, and is Head of the Artificial Intelligence Group at the Graphene and Advanced Materials Laboratory, where he leads interdisciplinary work at the intersection of AI and next-generation materials. With over 7 years of experience in artificial intelligence, microservices, and software architecture, he combines academic insight with hands-on expertise, and at Bluenest leverages this experience to push the boundaries of technology and science—keeping the company at the cutting edge of innovation.",
     img: 'Ali.jpg',
+    bioSide: 'left',
     social: [
       { href: '#', label: 'LinkedIn', Icon: IconLinkedIn },
       { href: '#', label: 'X', Icon: IconX },
@@ -144,9 +153,12 @@ const TEAM = [
     ],
   },
   {
-    name: 'Danial',
+    name: 'Danial Nekoonam',
     role: 'Founder Developer',
+    description:
+    "Danial is a multidisciplinary engineer with extensive startup experience, specializing in AI-driven products, backend systems, and intelligent automation. He holds a Master’s degree in Artificial Intelligence and Soft Computing. At BlueNest, he plays a key role in AI architecture, agent design, workflow automation, and platform engineering, transforming complex technical and business requirements into scalable, production-grade solutions. Danial combines strong architectural insight with hands-on implementation, consistently delivering robust, high-impact systems from initial concept through full deployment.",
     img: 'Danial.jpg',
+    bioSide: 'left',
     social: [
       { href: '#', label: 'LinkedIn', Icon: IconLinkedIn },
       { href: '#', label: 'X', Icon: IconX },
@@ -259,6 +271,44 @@ function useHeroParallax() {
   return ref;
 }
 
+function useTeamBioHeightSync() {
+  useEffect(() => {
+    const items = Array.from(document.querySelectorAll('.about-team-item'));
+    if (!items.length) return undefined;
+
+    const applyHeight = (item) => {
+      const teamCard = item.querySelector('.about-team-card');
+      if (!teamCard) return;
+      const h = Math.round(teamCard.getBoundingClientRect().height);
+      if (h > 0) item.style.setProperty('--about-bio-height', `${h}px`);
+    };
+
+    items.forEach(applyHeight);
+
+    const ro = new ResizeObserver((entries) => {
+      entries.forEach((entry) => {
+        const item = entry.target.closest('.about-team-item');
+        if (!item) return;
+        const h = Math.round(entry.contentRect.height);
+        if (h > 0) item.style.setProperty('--about-bio-height', `${h}px`);
+      });
+    });
+
+    items.forEach((item) => {
+      const teamCard = item.querySelector('.about-team-card');
+      if (teamCard) ro.observe(teamCard);
+    });
+
+    const onResize = () => items.forEach(applyHeight);
+    window.addEventListener('resize', onResize, { passive: true });
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', onResize);
+    };
+  }, []);
+}
+
 function AboutHero() {
   const heroRef = useHeroParallax();
   return (
@@ -317,26 +367,32 @@ function StorySection() {
 }
 
 function TeamCard({ member, revealIndex }) {
-  const { name, role, img, social } = member;
+  const { name, role, description, img, social, bioSide } = member;
   return (
-    <article
-      className="about-team-card"
+    <div
+      className={`about-team-item about-team-item--${bioSide}`}
       data-reveal
       style={{ transitionDelay: `${0.06 + revealIndex * 0.07}s` }}
     >
-      <div className="about-team-card__img-wrap">
-        <img className="about-team-card__img" src={img} alt={name} width="400" height="400" loading="lazy" />
-        <div className="about-team-card__img-overlay" aria-hidden="true" />
-        <div className="about-team-card__img-blue" aria-hidden="true" />
-      </div>
-      <div className="about-team-card__body">
-        <h3 className="about-team-card__name">{name}</h3>
-        <p className="about-team-card__role">{role}</p>
-        <div className="about-team-card__socials">
-          <SocialRollout social={social} />
+      <article className="about-team-card">
+        <div className="about-team-card__img-wrap">
+          <img className="about-team-card__img" src={img} alt={name} width="400" height="400" loading="lazy" />
+          <div className="about-team-card__img-overlay" aria-hidden="true" />
+          <div className="about-team-card__img-blue" aria-hidden="true" />
         </div>
-      </div>
-    </article>
+        <div className="about-team-card__body">
+          <h3 className="about-team-card__name">{name}</h3>
+          <p className="about-team-card__role">{role}</p>
+          <div className="about-team-card__socials">
+            <SocialRollout social={social} />
+          </div>
+        </div>
+      </article>
+      <aside className="about-team-bio-card" aria-hidden="true">
+        <h4 className="about-team-bio-card__title">{name}</h4>
+        <p className="about-team-bio-card__text">{description}</p>
+      </aside>
+    </div>
   );
 }
 
@@ -380,6 +436,7 @@ function TeamSection() {
 
 function AboutApp() {
   useReveal();
+  useTeamBioHeightSync();
   return (
     <main>
       <AboutHero />
