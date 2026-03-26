@@ -425,7 +425,7 @@ a { text-decoration: none; color: inherit; }
 
 .hero-h1 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(3.2rem, 7vw, 5.25rem);
+  font-size: clamp(2.6rem, 5.4vw, 4.35rem);
   font-weight: 900; line-height: .98; letter-spacing: -.04em;
   color: var(--ink);
   margin-bottom: 1.5rem;
@@ -533,27 +533,30 @@ a { text-decoration: none; color: inherit; }
   animation: fadeUp .9s .32s ease both;
 }
 .hero-workflow {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
-  gap: 1.25rem 1rem;
-  align-items: stretch;
+  position: relative;
+  display: block;
   width: 100%;
 }
 .hero-workflow-main {
+  width: min(100%, 1120px);
+  margin: 0 auto;
   min-width: 0;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 .hero-workflow-side {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 6;
+  transform: translate(20%, -50%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: .65rem;
-  align-self: center;
   max-width: 210px;
   width: 100%;
-  margin-right: clamp(0.75rem, 2.5vw, 2.25rem);
   padding: .7rem .75rem;
   background: var(--off);
   border: 1px solid var(--border);
@@ -803,7 +806,7 @@ button.hero-wf-step {
 .hero-workflow .hero-gif-frame {
   display: flex;
   flex-direction: column;
-  min-height: min(68vh, 720px);
+  min-height: min(76vh, 820px);
 }
 .hero-workflow .gif-media {
   flex: 1;
@@ -820,9 +823,15 @@ button.hero-wf-step {
 }
 @media (max-width: 900px) {
   .hero-workflow {
+    display: grid;
     grid-template-columns: 1fr;
   }
   .hero-workflow-side {
+    position: static;
+    top: auto;
+    right: auto;
+    z-index: auto;
+    transform: none;
     order: -1;
     max-width: none;
     margin-right: 0;
@@ -964,6 +973,21 @@ button.hero-wf-step {
   flex-shrink: 0; font-family: 'DM Mono', monospace;
   font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
   color: var(--muted);
+}
+.logos-track-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .32rem .7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(20, 88, 184, .2);
+  background: rgba(255, 255, 255, .9);
+  color: var(--blue);
+  font-family: 'DM Mono', monospace;
+  font-size: .56rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 .logos-marquee { flex: 1; min-width: 0; overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
@@ -1221,11 +1245,11 @@ button.hero-wf-step {
 .feat-rail-half-inner--copy {
   align-items: center;
 }
-/* Shared square frame — media + copy use identical size (fixes tiny video in tall viewport) */
+/* Base frame */
 .feat-rail-square {
   --rail-sz: min(
     calc(var(--rail-vw, 100vw) / 2 - 1.25rem),
-    min(68vmin, min(70vh, 560px))
+    min(72vmin, min(74vh, 620px))
   );
   width: var(--rail-sz);
   height: var(--rail-sz);
@@ -1236,6 +1260,12 @@ button.hero-wf-step {
   overflow: hidden;
 }
 .feat-rail-square--media {
+  --rail-media-w: min(
+    calc(var(--rail-vw, 100vw) / 2 - 1.25rem),
+    min(78vmin, min(72vh, 680px))
+  );
+  width: var(--rail-media-w);
+  height: calc(var(--rail-media-w) * 0.62);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, .1),
     0 12px 40px rgba(12, 39, 68, .22);
@@ -1309,7 +1339,7 @@ button.hero-wf-step {
   max-height: none;
   border-radius: inherit;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -1355,18 +1385,18 @@ button.hero-wf-step {
   color: rgba(255, 255, 255, .35);
 }
 .feat-rail-copy-card .feat-copy > p {
-  font-size: .88rem;
-  line-height: 1.75;
-  margin-bottom: 1rem;
+  font-size: .8rem;
+  line-height: 1.55;
+  margin-bottom: .65rem;
   color: var(--muted);
 }
 .feat-rail-copy-card .feat-bullets {
-  margin-bottom: 1rem;
-  gap: .35rem;
+  margin-bottom: .6rem;
+  gap: .25rem;
 }
 .feat-rail-copy-card .feat-bullet {
-  font-size: .8rem;
-  line-height: 1.5;
+  font-size: .72rem;
+  line-height: 1.35;
   color: rgba(12, 39, 68, .62);
 }
 [data-theme="dark"] .feat-rail-copy-card .feat-bullet {
@@ -1676,40 +1706,38 @@ button.hero-wf-step {
 .who-head .s-sub { max-width: 100%; }
 .who-head .s-sub + .s-sub { margin-top: 1rem; }
 .who-grid {
-  display: grid; grid-template-columns: repeat(5,1fr);
-  gap: 1px; background: var(--border);
-  border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
 }
 .who-card {
-  background: var(--surface); padding: 2rem 1.6rem;
-  transition: background .25s; position: relative;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem 1rem 1.15rem;
+  transition: border-color .25s, box-shadow .25s, transform .25s;
 }
-.who-card:hover { background: var(--off2); }
-.who-card::before {
-  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
-  background: var(--gold); transform: scaleX(0);
-  transform-origin: left; transition: transform .35s;
-}
-.who-card:hover::before { transform: scaleX(1); }
-.wc-num {
-  font-family: 'DM Mono', monospace; font-size: .65rem;
-  color: rgba(0,0,0,.18); margin-bottom: .9rem; letter-spacing: .1em;
+.who-card:hover {
+  border-color: rgba(20, 88, 184, .24);
+  box-shadow: 0 10px 28px rgba(6, 26, 51, .08);
+  transform: translateY(-2px);
 }
 .wc-thumb {
   width: 100%;
   aspect-ratio: 4 / 3;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  background: var(--sand);
-  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: visible;
+  margin-bottom: .9rem;
+  background: transparent;
+  border: 0;
 }
 .wc-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   display: block;
+  border-radius: 10px;
 }
 .wc-icon {
   width: 42px; height: 42px; border-radius: 10px;
@@ -2233,6 +2261,10 @@ button.hero-wf-step {
     height: min(calc(100vw - 2.5rem), min(88vmin, 400px));
     max-width: 100%;
   }
+  .feat-rail-square--media {
+    width: min(calc(100vw - 2.5rem), 540px);
+    height: min(calc((100vw - 2.5rem) * 0.62), 335px);
+  }
   .feat-rail-phone,
   .feat-rail-phone-chrome {
     min-height: 0;
@@ -2357,6 +2389,10 @@ button.hero-wf-step {
   .feat-rail-square {
     width: min(calc(100vw - 2.5rem), min(88vmin, 380px));
     height: min(calc(100vw - 2.5rem), min(88vmin, 380px));
+  }
+  .feat-rail-square--media {
+    width: min(calc(100vw - 2.5rem), 520px);
+    height: min(calc((100vw - 2.5rem) * 0.62), 320px);
   }
   .feat-rail-phone,
   .feat-rail-phone-chrome {
@@ -2833,13 +2869,6 @@ function Hero() {
           The first valuation engine that analyzes listing photos.
         </p>
 
-        <div className="hero-eyebrow" style={{animation:'fadeUp .55s ease both'}}>
-          <div className="eyebrow-pip"/>
-          <span className="spa-brand">AI-Powered Valuations.</span>
-          <span style={{opacity:.45,margin:'0 .15rem'}}>·</span>
-          Now Live in Canada · Coming Soon to US Market
-        </div>
-
         <div className="hero-ctas" style={{animation:'fadeUp .7s .18s ease both'}}>
           <a href="https://app.bluenest.ai" className="btn-primary">
             Try BlueNest Free<Arrow size={14}/>
@@ -2860,14 +2889,20 @@ function Hero() {
   );
 }
 
-const TRUST_BRANDS = ['Compass','CoreLogic','Redfin','CBRE','JLL','Keller Williams','Colliers'];
+const TRUST_BRANDS = [
+  'AI-Powered Valuation',
+  'Now Live in Canada',
+  'Coming Soon to US Market',
+  'MLS-Ready Insights',
+  'Built for Modern Brokerages'
+];
 
 /* ══ LOGOS ══ */
 function Logos() {
   return (
     <div className="logos-strip">
       <div className="logos-strip-inner">
-        <div className="logos-label">Used by teams at</div>
+        <div className="logos-label"></div>
         <div className="logos-marquee">
           <div className="logos-track" aria-label="Partner logos">
             {TRUST_BRANDS.map(n => <span key={n}>{n}</span>)}
@@ -3235,16 +3270,11 @@ function Who() {
           <p className="s-sub r d2">Whether you&apos;re buying, selling, advising, or appraising, BlueNest gives you the clarity and confidence to make better real estate decisions.</p>
         </div>
         <div className="who-grid r d3">
-          {cards.map(({ num, icon, imgSrc, title, text, tag }) => (
+          {cards.map(({ num, imgSrc, title, text, tag }) => (
             <div key={num} className="who-card">
-              <div className="wc-num">// {num}</div>
-              {imgSrc ? (
-                <div className="wc-thumb">
-                  <img src={imgSrc} alt={title} width={400} height={300} loading="lazy" decoding="async"/>
-                </div>
-              ) : (
-                <div className="wc-icon">{icon}</div>
-              )}
+              <div className="wc-thumb">
+                <img src={imgSrc} alt={title} width={400} height={300} loading="lazy" decoding="async"/>
+              </div>
               <div className="wc-title">{title}</div>
               <div className="wc-text">{text}</div>
               <div className="wc-tag">{tag}</div>
@@ -3551,10 +3581,10 @@ function App() {
       <Navbar setMob={setMob} dark={dark} onToggleTheme={() => setDark(d => !d)}/>
       <MobileNav open={mob} onClose={() => setMob(false)} dark={dark} onToggleTheme={() => setDark(d => !d)}/>
       <Hero/>
-      <Who/>
       <Logos/>
       <WhatMakesDifferent/>
       <FeatureRail features={features}/>
+      <Who/>
       <Testimonials/>
       <Pricing/>
       <FAQ/>
