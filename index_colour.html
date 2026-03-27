@@ -30,40 +30,40 @@
   --navy:    #5BABF5;
 }
 
-/* Light mode — thick white bands on blue-tinted sections so they read clearly vs the page */
+/* Light mode — semi-transparent white bands on blue-tinted sections for softer separation */
 [data-theme="light"] .who-section,
 [data-theme="light"] .pricing-section {
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #ffffff 22px,
+    rgba(255, 255, 255, .82) 0%,
+    rgba(255, 255, 255, .82) 22px,
     var(--off) 22px,
     var(--off) calc(100% - 22px),
-    #ffffff calc(100% - 22px),
-    #ffffff 100%
+    rgba(255, 255, 255, .82) calc(100% - 22px),
+    rgba(255, 255, 255, .82) 100%
   );
   border-top-width: 4px;
   border-bottom-width: 4px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+  border-top-color: rgba(255, 255, 255, .82);
+  border-bottom-color: rgba(255, 255, 255, .82);
 }
 [data-theme="light"] .logos-strip {
   background: linear-gradient(
     180deg,
-    #ffffff 0%,
-    #ffffff 20px,
+    rgba(255, 255, 255, .82) 0%,
+    rgba(255, 255, 255, .82) 20px,
     var(--off) 20px,
     var(--white) 45%,
     var(--off) calc(100% - 20px),
-    #ffffff calc(100% - 20px),
-    #ffffff 100%
+    rgba(255, 255, 255, .82) calc(100% - 20px),
+    rgba(255, 255, 255, .82) 100%
   );
   border-top-width: 4px;
   border-bottom-width: 4px;
-  border-top-color: #ffffff;
-  border-bottom-color: #ffffff;
+  border-top-color: rgba(255, 255, 255, .82);
+  border-bottom-color: rgba(255, 255, 255, .82);
 }
 [data-theme="light"] .feat-rail-sticky {
   background:
@@ -2339,12 +2339,12 @@ button.hero-wf-step {
   [data-theme="light"] .feat-rail-panel--copy {
     background: linear-gradient(
       180deg,
-      #ffffff 0%,
-      #ffffff 18px,
+      rgba(255, 255, 255, .82) 0%,
+      rgba(255, 255, 255, .82) 18px,
       var(--off) 18px,
       var(--off) calc(100% - 18px),
-      #ffffff calc(100% - 18px),
-      #ffffff 100%
+      rgba(255, 255, 255, .82) calc(100% - 18px),
+      rgba(255, 255, 255, .82) 100%
     );
   }
   .feat-rail-line-wrap { display: none; }
@@ -2474,12 +2474,12 @@ button.hero-wf-step {
   [data-theme="light"] .feat-rail-panel--copy {
     background: linear-gradient(
       180deg,
-      #ffffff 0%,
-      #ffffff 18px,
+      rgba(255, 255, 255, .82) 0%,
+      rgba(255, 255, 255, .82) 18px,
       var(--off) 18px,
       var(--off) calc(100% - 18px),
-      #ffffff calc(100% - 18px),
-      #ffffff 100%
+      rgba(255, 255, 255, .82) calc(100% - 18px),
+      rgba(255, 255, 255, .82) 100%
     );
   }
   .feat-rail-line-fill { transition: none; transform: scaleX(1); }
