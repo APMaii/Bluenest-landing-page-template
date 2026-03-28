@@ -68,6 +68,12 @@
   border-top-color: rgba(255, 255, 255, .82);
   border-bottom-color: rgba(255, 255, 255, .82);
 }
+[data-theme="light"] .logos-track span {
+  color: rgba(91, 171, 245, .62);
+}
+[data-theme="light"] .logos-track span:hover {
+  color: rgba(91, 171, 245, .92);
+}
 [data-theme="light"] .feat-rail-sticky {
   background:
     radial-gradient(120% 80% at 50% -10%, rgba(91, 171, 245, .06) 0%, transparent 55%),
@@ -3413,7 +3419,7 @@ function FeatureRail({ features }) {
               </div>
             ))}
           </div>
-          <p className="feat-rail-hint">Scroll · 4 pairs · 8 panels</p>
+          <p className="feat-rail-hint"></p>
         </div>
       </div>
     </section>
@@ -3488,7 +3494,8 @@ function WhatMakesDifferent() {
 }
 
 /* ══ WHO ══ */
-function Who() {
+function Who({ dark }) {
+  const homeDir = dark ? 'Dark_Home' : 'Light_Home';
   const cards = [
     { num: '01', icon: '🏠', imgSrc: 'home_buyers.png', title: 'Home Buyers', text: 'Understand what a home is truly worth before making an offer — with real data, comparable insights, and full transparency.', tag: 'For buyers' },
     { num: '02', icon: '💰', imgSrc: 'home_sellers.png', title: 'Home Sellers', text: 'Price your property accurately, avoid costly mistakes, and attract serious buyers using real market evidence.', tag: 'For sellers' },
@@ -3510,7 +3517,7 @@ function Who() {
           {cards.map(({ num, imgSrc, title, text, tag }) => (
             <div key={num} className="who-card">
               <div className="wc-thumb">
-                <img src={imgSrc} alt={title} width={400} height={300} loading="lazy" decoding="async"/>
+                <img src={`${homeDir}/${imgSrc}`} alt={title} width={400} height={300} loading="lazy" decoding="async" key={`${homeDir}-${num}`}/>
               </div>
               <div className="wc-title">{title}</div>
               <div className="wc-text">{text}</div>
@@ -3821,7 +3828,7 @@ function App() {
       <Logos/>
       <WhatMakesDifferent/>
       <FeatureRail features={features}/>
-      <Who/>
+      <Who dark={dark}/>
       <Testimonials/>
       <Pricing/>
       <FAQ/>
