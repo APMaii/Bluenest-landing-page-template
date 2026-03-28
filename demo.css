@@ -27,9 +27,9 @@
   inset: -30% -10% -20%;
   pointer-events: none;
   background:
-    radial-gradient(ellipse 70% 50% at 18% 20%, rgba(20, 88, 184, 0.42) 0%, transparent 55%),
-    radial-gradient(ellipse 55% 45% at 88% 30%, rgba(201, 148, 28, 0.2) 0%, transparent 50%),
-    radial-gradient(ellipse 45% 40% at 50% 100%, rgba(30, 111, 212, 0.18) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 50% at 18% 20%, rgba(91, 171, 245, 0.42) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 88% 30%, rgba(233, 160, 80, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse 45% 40% at 50% 100%, rgba(91, 171, 245, 0.18) 0%, transparent 50%);
   animation: demoMesh 20s ease-in-out infinite alternate;
 }
 
@@ -62,14 +62,14 @@
   height: min(50vw, 420px);
   top: -15%;
   left: -8%;
-  background: rgba(74, 158, 255, 0.22);
+  background: rgba(91, 171, 245, 0.22);
 }
 .demo-hero__glow--b {
   width: min(38vw, 320px);
   height: min(38vw, 320px);
   bottom: -5%;
   right: -5%;
-  background: rgba(224, 112, 21, 0.12);
+  background: rgba(240, 146, 72, 0.12);
 }
 
 .demo-hero__noise {
@@ -152,6 +152,43 @@
   color: rgba(200, 215, 235, 0.78);
 }
 
+/* Light mode — soft sky-blue hero (not the dark band) */
+[data-theme="light"] .demo-hero {
+  background: linear-gradient(165deg, #f0f7ff 0%, #e8f2fc 42%, #dceef9 100%);
+  color: #0c1829;
+}
+[data-theme="light"] .demo-hero__mesh {
+  background:
+    radial-gradient(ellipse 70% 50% at 18% 20%, rgba(91, 171, 245, 0.22) 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 88% 30%, rgba(233, 160, 80, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 45% 40% at 50% 100%, rgba(91, 171, 245, 0.12) 0%, transparent 50%);
+}
+[data-theme="light"] .demo-hero__grid {
+  opacity: 0.38;
+  background-image:
+    linear-gradient(rgba(91, 171, 245, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91, 171, 245, 0.1) 1px, transparent 1px);
+}
+[data-theme="light"] .demo-hero__glow--a {
+  background: rgba(91, 171, 245, 0.2);
+}
+[data-theme="light"] .demo-hero__glow--b {
+  background: rgba(233, 160, 80, 0.1);
+}
+[data-theme="light"] .demo-hero__noise {
+  opacity: 0.028;
+  mix-blend-mode: multiply;
+}
+[data-theme="light"] .demo-hero__eyebrow {
+  color: rgba(61, 90, 128, 0.88);
+}
+[data-theme="light"] .demo-hero__eyebrow-line {
+  background: linear-gradient(90deg, transparent, rgba(91, 171, 245, 0.45), transparent);
+}
+[data-theme="light"] .demo-hero__lead {
+  color: #3d4d62;
+}
+
 /* ─── Content + video stage ─── */
 .demo-content {
   position: relative;
@@ -216,9 +253,9 @@
   background: var(--border);
   opacity: 0.85;
 }
-.demo-video-chrome__dots > span:nth-child(1) { background: rgba(224, 112, 21, 0.55); }
-.demo-video-chrome__dots > span:nth-child(2) { background: rgba(201, 148, 28, 0.5); }
-.demo-video-chrome__dots > span:nth-child(3) { background: rgba(20, 88, 184, 0.45); }
+.demo-video-chrome__dots > span:nth-child(1) { background: rgba(240, 146, 72, 0.55); }
+.demo-video-chrome__dots > span:nth-child(2) { background: rgba(233, 160, 80, 0.5); }
+.demo-video-chrome__dots > span:nth-child(3) { background: rgba(91, 171, 245, 0.45); }
 
 .demo-video-chrome__label {
   font-family: 'DM Sans', monospace;
@@ -317,14 +354,14 @@
 }
 
 .demo-list li:hover {
-  border-color: rgba(20, 88, 184, 0.22);
+  border-color: rgba(91, 171, 245, 0.22);
   border-left-color: var(--orange);
   background: var(--page-bg);
   box-shadow: 0 4px 20px rgba(6, 26, 51, 0.06);
 }
 
 [data-theme="dark"] .demo-list li:hover {
-  border-color: rgba(90, 168, 255, 0.22);
+  border-color: rgba(91, 171, 245, 0.22);
   border-left-color: var(--orange);
   background: rgba(0, 0, 0, 0.22);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
@@ -370,13 +407,13 @@
   letter-spacing: -0.01em;
   transition: background 0.25s, box-shadow 0.25s, transform 0.2s;
   box-shadow:
-    0 1px 2px rgba(20, 88, 184, 0.15),
-    0 8px 24px rgba(20, 88, 184, 0.22);
+    0 1px 2px rgba(91, 171, 245, 0.15),
+    0 8px 24px rgba(91, 171, 245, 0.22);
 }
 
 .demo-cta:hover {
   background: var(--orange);
-  box-shadow: 0 8px 28px rgba(224, 112, 21, 0.38);
+  box-shadow: 0 8px 28px rgba(240, 146, 72, 0.38);
   transform: translateY(-1px);
 }
 
