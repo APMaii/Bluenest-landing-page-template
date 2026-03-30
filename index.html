@@ -118,6 +118,14 @@
   text-shadow: var(--shadow-text-on-blue);
   -webkit-text-fill-color: rgba(255, 255, 255, 0.98);
 }
+[data-theme="light"] .bn-diff-section .bn-diff-kicker,
+[data-theme="light"] .bn-diff-section .bn-diff-split-hero__title-line--a,
+[data-theme="light"] .bn-diff-section .bn-diff-split-hero__title-line--b,
+[data-theme="light"] .bn-diff-section .bn-diff-split-hero__title-line--a strong,
+[data-theme="light"] .bn-diff-section .bn-diff-split-hero__title-line--b strong,
+[data-theme="light"] .bn-diff-section .bn-diff-split-hero__title-line--b em {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 0 8px rgba(255, 255, 255, 0.08);
+}
 [data-theme="light"] .bn-diff-section .bn-diff-lead {
   color: rgba(255, 255, 255, 0.62);
 }
@@ -157,6 +165,15 @@
   color: rgba(55, 110, 165, 0.92);
   font-weight: 700;
   text-shadow: none;
+}
+[data-theme="light"] .bn-diff-section .bn-diff-bar .bn-diff-bar__title {
+  color: rgba(33, 78, 128, 0.96);
+}
+[data-theme="light"] .bn-diff-section .bn-diff-bar .bn-diff-bar__subtitle {
+  color: rgba(78, 102, 132, 0.95);
+}
+[data-theme="light"] .bn-diff-section .bn-diff-bar .bn-diff-bar__meta {
+  color: rgba(58, 92, 130, 0.86);
 }
 
 /* Light mode — pillar cards: light surfaces + dark type (readable on white / pale panels) */
@@ -303,29 +320,31 @@
 }
 
 [data-theme="light"] .faq-section .faq-left h2 {
-  color: var(--on-blue-strong);
-  text-shadow: var(--shadow-text-on-blue);
+  color: rgba(255, 255, 255, 0.99);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 0 10px rgba(233, 160, 80, 0.14) !important;
 }
 [data-theme="light"] .faq-section .faq-left h2 em {
-  color: rgba(255, 255, 255, 0.55);
-  text-shadow: var(--shadow-text-on-blue);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28), 0 0 10px rgba(233, 160, 80, 0.16) !important;
 }
 [data-theme="light"] .faq-section .faq-left p {
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 8px rgba(233, 160, 80, 0.1) !important;
 }
 [data-theme="light"] .faq-section .faq-q {
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 2px rgba(0, 38, 72, 0.28);
+  color: rgba(255, 255, 255, 0.97);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 9px rgba(233, 160, 80, 0.12);
 }
 [data-theme="light"] .faq-section .faq-q:hover {
   color: #ffffff;
 }
 [data-theme="light"] .faq-section .faq-toggle {
-  color: rgba(255, 255, 255, 0.72);
-  border-color: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 226, 196, 0.45);
 }
 [data-theme="light"] .faq-section .faq-a {
-  color: rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.88);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 7px rgba(233, 160, 80, 0.08);
 }
 [data-theme="light"] .faq-section .faq-more {
   color: rgba(255, 255, 255, 0.62);
@@ -348,10 +367,12 @@
 
 [data-theme="light"] .footer .f-tagline {
   color: rgba(255, 255, 255, 0.62);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.26), 0 0 6px rgba(255, 255, 255, 0.05);
 }
 [data-theme="light"] .footer .f-social a {
   color: rgba(255, 255, 255, 0.78);
   border-color: rgba(255, 255, 255, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 [data-theme="light"] .footer .f-social a:hover {
   color: #ffffff;
@@ -359,16 +380,18 @@
 }
 [data-theme="light"] .footer .f-col-title {
   color: rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
 }
 [data-theme="light"] .footer .footer-col a {
   color: rgba(255, 255, 255, 0.82);
-  text-shadow: 0 1px 2px rgba(0, 38, 72, 0.22);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24), 0 0 5px rgba(255, 255, 255, 0.04);
 }
 [data-theme="light"] .footer .footer-col a:hover {
   text-shadow: 0 1px 3px rgba(0, 38, 72, 0.35);
 }
 [data-theme="light"] .footer .f-copy {
   color: rgba(255, 255, 255, 0.52);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 /* Who (“3 years in the making”): ink was same hue as bg — use deep contrast */
@@ -1641,6 +1664,8 @@ button.hero-wf-step {
     0 12px 40px rgba(91, 171, 245, .22);
 }
 .feat-rail-square--copy {
+  height: calc(var(--rail-sz) * 0.7);
+  min-height: 260px;
   box-shadow: 0 8px 32px rgba(91, 171, 245, .08);
 }
 /* Phone-style preview — fills the square */
@@ -2852,6 +2877,36 @@ button.hero-wf-step {
   font-size: .85rem;
   padding: .52rem 1.2rem;
 }
+.bn-diff-bar.bn-diff-bar--expanded {
+  padding: clamp(1.35rem, 2.9vw, 2rem) clamp(1.35rem, 2.8vw, 2.15rem);
+  gap: clamp(1rem, 2.2vw, 1.6rem);
+}
+.bn-diff-bar__copy {
+  flex: 1 1 34rem;
+  max-width: 48rem;
+}
+.bn-diff-bar__title {
+  margin: 0 0 .55rem;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.15rem, 2.1vw, 1.6rem);
+  line-height: 1.18;
+  letter-spacing: -.02em;
+  color: rgba(255, 255, 255, .92);
+}
+.bn-diff-bar__subtitle {
+  margin: 0;
+  font-size: clamp(.88rem, 1.35vw, .98rem);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, .68);
+}
+.bn-diff-bar__meta {
+  margin: .58rem 0 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: .74rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .56);
+}
 @media (max-width: 1020px) {
   .bn-diff-pillars {
     grid-template-columns: 1fr;
@@ -3113,6 +3168,7 @@ button.hero-wf-step {
   gap: .4rem .65rem;
   margin-bottom: 1.25rem;
   align-items: start;
+  flex: 1 1 auto;
 }
 .p-feat {
   display: flex;
@@ -3134,6 +3190,7 @@ button.hero-wf-step {
   width: 100%; padding: .78rem; border-radius: 10px;
   font-size: .87rem; font-weight: 700; cursor: pointer; transition: all .25s;
   font-family: 'DM Sans', sans-serif; letter-spacing: -.01em;
+  margin-top: auto;
 }
 .p-btn-ghost { background: var(--off); border: 1px solid var(--border); color: var(--ink); }
 .p-btn-ghost:hover { background: var(--sand); border-color: rgba(0,0,0,.12); }
@@ -3853,8 +3910,8 @@ function Navbar({ setMob, dark, onToggleTheme }) {
         >
           {dark ? <IconSun/> : <IconMoon/>}
         </button>
-        <a href="#" className="btn-nav-ghost">Log in</a>
-        <a href="#pricing" className="btn-nav-fill">Get started <Arrow size={12}/></a>
+        <a href="https://app.bluenest.ai" className="btn-nav-ghost">Log in</a>
+        <a href="https://app.bluenest.ai" className="btn-nav-fill">Get started <Arrow size={12}/></a>
       </div>
       <button className="ham" onClick={() => setMob(true)} aria-label="Open menu">
         <span/><span/><span/>
@@ -4108,8 +4165,8 @@ function Hero() {
         </h1>
 
         <p className="hero-lead" style={{animation:'fadeUp .68s .12s ease both'}}>
-          Transparent. Accurate. In seconds.
           The first valuation engine that analyzes listing photos.
+          Transparent. Accurate. In seconds.
         </p>
 
         <div className="hero-ctas" style={{animation:'fadeUp .7s .18s ease both'}}>
@@ -4557,30 +4614,30 @@ function WhatMakesDifferent() {
       n: '01',
       badge: 'vision',
       badgeCaption: '',
-      label: 'BlueVision',
-      title: 'The listing, decoded',
-      hook: 'Photos drive real signals — not filler thumbnails.',
-      detail: 'View, renovation, condition, and layout from every image. What spreadsheets alone will always miss.',
+      label: 'BLUEVISION',
+      title: 'The Photos actually reveal',
+      hook: 'We analyze listing Photos',
+      detail: 'Turning view, condition, layout, and renovation into true valuation signals.',
       chips: [],
     },
     {
       n: '02',
       badge: 'rowsfields',
       badgeCaption: '',
-      label: 'True comparables',
+      label: 'TRUE COMPARABLES',
       title: 'Comps that actually compare',
-      hook: 'Same rigor as an experienced agent or appraiser.',
-      detail: 'Similarity goes past beds and sq ft — condition, view, and 150+ structured points.',
+      hook: 'Properties matched across 150+ data points',
+      detail: 'Using real appraiser logic and market data.',
       chips: [],
     },
     {
       n: '03',
       badge: 'chat',
       badgeCaption: '',
-      label: 'Market intelligence',
+      label: 'MARKET INTELLIGENCE',
       title: 'The whole market story',
-      hook: 'Sold and active — plus what failed and why.',
-      detail: 'See value, competition, and timing from how the market really reacted.',
+      hook: 'Sold, active and failed listings',
+      detail: 'Showing how the market actually behaved.',
       chips: [],
     },
   ];
@@ -4592,7 +4649,7 @@ function WhatMakesDifferent() {
           <span className="bn-diff-kicker">What makes BlueNest different</span>
           <h2 className="bn-diff-split-hero__title r d1">
             <span className="bn-diff-split-hero__title-line bn-diff-split-hero__title-line--a">
-              Most tools see <strong>data</strong>.
+              Most tools see data.
             </span>
             <span className="bn-diff-split-hero__title-line bn-diff-split-hero__title-line--b">
               <em>BlueNest</em> sees the <strong>property</strong>.
@@ -4633,8 +4690,12 @@ function WhatMakesDifferent() {
             </article>
           ))}
         </div>
-        <div className="bn-diff-bar r d4">
-          <p><strong>Appraisal-grade, not a black box.</strong> Every step is visible — from photos to comps to market behavior.</p>
+        <div className="bn-diff-bar bn-diff-bar--expanded r d4">
+          <div className="bn-diff-bar__copy">
+            <h3 className="bn-diff-bar__title">One valuation you can actually defend</h3>
+            <p className="bn-diff-bar__subtitle">BlueNest analyzes listing photos, catches true comparables, and reveals how the market actually behaved, all in one transparent report. Every stage is visible. Every number is explained.</p>
+            <p className="bn-diff-bar__meta">Appraisal-grade. In seconds.</p>
+          </div>
           <a href="demo.html" className="btn-primary">See it in action <Arrow size={14}/></a>
         </div>
       </div>
@@ -4754,7 +4815,7 @@ function Pricing() {
                 <div key={f} className="p-feat"><div className="p-feat-dot"/>{f}</div>
               ))}
             </div>
-            <a href="#" className="p-btn p-btn-ghost">Start Free</a>
+            <a href="https://app.bluenest.ai" className="p-btn p-btn-ghost">Start Free</a>
           </div>
           <div className="p-card featured">
             <div className="p-tier">Premium</div>
@@ -4765,7 +4826,7 @@ function Pricing() {
                 <div key={f} className="p-feat"><div className="p-feat-dot"/>{f}</div>
               ))}
             </div>
-            <a href="#" className="p-btn p-btn-orange">Get Premium →</a>
+            <a href="https://app.bluenest.ai" className="p-btn p-btn-orange">Get Premium →</a>
           </div>
           </div>
         </div>
@@ -4792,13 +4853,13 @@ function FAQ() {
         <div className="faq-left">
           <div className="s-tag r">FAQ</div>
           <h2 className="r d1" style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(2rem,3.5vw,2.9rem)',fontWeight:900,letterSpacing:'-.04em',color:'var(--white)',lineHeight:1.06,marginBottom:'1rem'}}>
-            Questions,<br/><em style={{fontStyle:'italic',color:'rgba(255,255,255,.3)'}}>answered.</em>
+            Questions,<br/><em style={{fontStyle:'italic',color:'rgba(233,160,80,.98)'}}>answered.</em>
           </h2>
-          <p className="r d2" style={{fontSize:'.9rem',color:'rgba(255,255,255,.4)',lineHeight:1.7}}>
+          <p className="r d2" style={{fontSize:'.9rem',color:'rgba(255,255,255,.94)',lineHeight:1.7}}>
             These are a few of the questions we hear most often. For the full list visit{' '}
-            <a href="faq.html" style={{color:'var(--blue)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>our FAQ page</a>
+            <a href="faq.html" style={{color:'rgba(233,160,80,.98)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>our FAQ page</a>
             {' '}— or{' '}
-            <a href="contact.html" style={{color:'var(--blue)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>reach out</a>
+            <a href="contact.html" style={{color:'rgba(233,160,80,.98)',borderBottom:'1px solid currentColor',paddingBottom:'.1rem',cursor:'pointer'}}>reach out</a>
             {' '}if yours is not covered.
           </p>
         </div>
@@ -4830,7 +4891,7 @@ function CTAStrip() {
           BlueNest combines real comparable sales, appraisal-grade valuation logic, and AI-powered analysis to deliver accurate, transparent property valuations — so you can make decisions with confidence.
         </p>
         <p className="cta-sub r d2">
-          No estimates. No guesswork. Just real market clarity.
+          A fully transparent report: showing every comparable, every adjustment, and how the market actually behaved.
         </p>
         <div className="r d3" style={{display:'flex',gap:'.8rem',justifyContent:'center',flexWrap:'wrap'}}>
           <a href="https://app.bluenest.ai" className="btn-primary"><Arrow size={14}/> Try BlueNest</a>
@@ -4881,8 +4942,6 @@ function Footer() {
             <div className="f-col-title">Legal</div>
             <a href="privacy-policy.html">Privacy</a>
             <a href="terms-of-service.html">Terms of service</a>
-            <a href="#">Cookies</a>
-            <a href="#">Status</a>
           </nav>
         </div>
         <div className="footer-divider" aria-hidden="true"/>
@@ -4920,12 +4979,12 @@ function App() {
     {
       index: '01',
       tag: 'Property Similarity Analysis',
-      title: 'See What Your Property Is Actually Worth <em>— Instantly</em>',
-      desc: 'Enter your property address and BlueNest identifies truly comparable homes — not just by size or bedrooms, but by renovation, view, and layout. It then analyzes how those properties have performed across sold, active, and failed listings to determine the true market value of your property.',
+      title: 'Find your property.<br/>See the market.',
+      desc: 'Enter your address. We find truly comparable homes and show how they performed across sold, active, and failed listings.',
       bullets: [
-        'Find Truly Comparable Homes — Go beyond basic filters by matching properties based on renovation, view, and layout — not just size and bedroom count.',
-        'Understand Real Market Value — Analyze how similar homes have actually performed — including what sold and what failed to sell.',
-        'Measure Market Competition — See how competitive the market is right now by evaluating active listings and recent market behavior.',
+        'True comparables: matched beyond beds and sqft',
+        'Real market behavior: what sold and what did not',
+        'Live competition: what you are up against right now',
       ],
       linkLabel: 'Similarity analysis',
       icon: '🔍', mediaLabel: 'search.gif', gifSrc: 'search.gif', reversed: false,
@@ -4933,38 +4992,40 @@ function App() {
     {
       index: '02',
       tag: 'View & Renovation Detection',
-      title: 'What listing photos<br/><em>actually show.</em>',
-      desc: 'Powered by BlueVision, our first-to-market technology, BlueNest analyzes listing photos to understand view quality, layout, and renovation level — adding a layer of intelligence that traditional valuation methods miss.',
-      bullets: ['Renovation and finish signals from listing photos', 'View and exposure classification', 'Condition cues aligned to comp selection', 'Transparent inputs behind every adjustment'],
-      linkLabel: 'View & renovation',
+      title: 'Every comparable,<br/><em>fully visible</em>',
+      desc: 'See all comparable homes in one place with view, condition, layout, and pricing clearly aligned.',
+      bullets: [
+        'Side-by-side comparison across all comps',
+        'Same criteria applied to every property',
+        'Every input behind the comparison is shown',
+      ],
+      linkLabel: 'View comparables',
       icon: '👁️', mediaLabel: 'results.gif', gifSrc: 'results.gif', reversed: true,
     },
     {
       index: '03',
       tag: 'Appraisal-grade CMA',
-      title: 'Generate a Transparent,<br/><em>Appraisal-Grade CMA</em> in Seconds',
-      desc: 'Get a complete Comparable Market Analysis built on real sales, ranked by true similarity, with full transparency into how your property\'s value is determined. No more guessing. No more questioning. Just clear, defensible pricing. The most transparent way to understand a home\'s value — like a Carfax for real estate.',
+      title: 'Your valuation,<br/><em>fully explained</em>',
+      desc: 'One complete report showing your valuation, your comparables, and how the market responded.',
       bullets: [
-        'See Exactly How Your Value Is Calculated — No black boxes — every adjustment, comparable, and assumption is clearly shown so you understand how the final price is determined.',
-        'Ranked Comparable Properties by True Similarity — Every comparable is scored based on renovation, view, layout, and overall similarity — so you know which ones truly matter.',
-        'Time & Feature Adjusted Pricing — Sales are adjusted for market timing and property differences, giving you a valuation that reflects today\'s market — not outdated numbers.',
-        'Full Market Breakdown — Analyze sold, active, and failed listings to understand both value and market pressure.',
+        'Clear breakdown of how your price is built',
+        'Sold, active, and failed listings analyzed together',
+        'Every adjustment and input fully visible',
       ],
-      linkLabel: 'Generate a CMA',
+      linkLabel: 'View CMA',
       icon: '📊', mediaLabel: 'cma.gif', gifSrc: 'cma.gif', reversed: false,
     },
     {
       index: '04',
       tag: 'Agent Blue',
-      title: 'Meet Your<br/><em>AI Property Analyst</em>',
-      desc: 'Agent Blue is a custom-built, agentic AI designed specifically for real estate — able to analyze your property, comparables, and market data to answer complex questions in real time. Unlike traditional chatbots, Agent Blue can reason through your data, evaluate comparable properties, and provide clear, actionable insights tailored to your property. Get instant answers, deeper insights, and the confidence to make smarter real estate decisions. Agent Blue is a custom-built, agentic AI that goes beyond chat — actively analyzing your property, comparables, and market data to deliver real-time, property-specific insights.',
+      title: 'Your CMA,<br/><em>fully interactive</em>',
+      desc: 'Meet Agent Blue: an intelligent layer on top of your CMA. Ask anything about your property, comparables, or pricing and get clear answers instantly.',
       bullets: [
-        'Why did a similar property sell for more or less than mine?',
-        'If I renovate, how much could my property be worth?',
-        'How does my home compare to others in the building or neighborhood?',
-        'What are the key factors driving value in this area?',
+        'Ask any question about your report or comps',
+        'Test pricing scenarios instantly',
+        'Understand every detail of your valuation',
       ],
-      linkLabel: 'Agent Blue',
+      linkLabel: 'Ask Agent Blue',
       icon: '🤖', mediaLabel: 'agent.png', gifSrc: 'agent.png', reversed: true,
     },
   ];
