@@ -247,7 +247,7 @@
       box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
     }
 
-    /* Glass look for the two application forms */
+    /* Glass look for the hero application form */
     .realtor-page .bn-hero-right > .bn-card,
     .realtor-page #apply .bn-apply-grid > .bn-card {
       background: color-mix(in oklab, var(--bn-white) 44%, transparent);
@@ -258,8 +258,7 @@
     }
 
     /* Ensure light mode is visibly glassy (rgba fallback for blur) */
-    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card,
-    [data-theme="light"] .realtor-page #apply .bn-apply-grid > .bn-card {
+    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card {
       background: rgba(255, 255, 255, 0.05) !important;
       background-image: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.04)) !important;
       border-color: rgba(20, 88, 184, 0.18) !important;
@@ -270,48 +269,41 @@
         0 0 0 1px rgba(20, 88, 184, 0.10) inset !important;
     }
 
-    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card,
-    [data-theme="dark"] .realtor-page #apply .bn-apply-grid > .bn-card {
+    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card {
       background: color-mix(in oklab, var(--surface) 50%, transparent);
       border-color: color-mix(in oklab, var(--border) 55%, transparent);
       box-shadow: 0 30px 110px rgba(0, 0, 0, 0.55);
     }
 
-    .realtor-page .bn-hero-right > .bn-card .bn-input,
-    .realtor-page #apply .bn-apply-grid > .bn-card .bn-input {
+    .realtor-page .bn-hero-right > .bn-card .bn-input {
       background: color-mix(in oklab, var(--bn-white) 62%, transparent);
       border-color: color-mix(in oklab, var(--bn-border) 55%, transparent);
     }
 
-    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card .bn-input,
-    [data-theme="light"] .realtor-page #apply .bn-apply-grid > .bn-card .bn-input {
+    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card .bn-input {
       background: rgba(255, 255, 255, 0.06) !important;
       border-color: rgba(20, 88, 184, 0.18) !important;
       backdrop-filter: blur(18px) saturate(1.14) !important;
       -webkit-backdrop-filter: blur(18px) saturate(1.14) !important;
     }
 
-    .realtor-page .bn-hero-right > .bn-card .bn-radio,
-    .realtor-page #apply .bn-apply-grid > .bn-card .bn-radio {
+    .realtor-page .bn-hero-right > .bn-card .bn-radio {
       background: color-mix(in oklab, var(--bn-white) 62%, transparent);
       border-color: color-mix(in oklab, var(--bn-border) 55%, transparent);
     }
 
-    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card .bn-radio,
-    [data-theme="light"] .realtor-page #apply .bn-apply-grid > .bn-card .bn-radio {
+    [data-theme="light"] .realtor-page .bn-hero-right > .bn-card .bn-radio {
       background: rgba(255, 255, 255, 0.05) !important;
       border-color: rgba(20, 88, 184, 0.18) !important;
       backdrop-filter: blur(18px) saturate(1.14) !important;
       -webkit-backdrop-filter: blur(18px) saturate(1.14) !important;
     }
 
-    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card .bn-input,
-    [data-theme="dark"] .realtor-page #apply .bn-apply-grid > .bn-card .bn-input {
+    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card .bn-input {
       background: color-mix(in oklab, var(--surface) 48%, transparent);
     }
 
-    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card .bn-radio,
-    [data-theme="dark"] .realtor-page #apply .bn-apply-grid > .bn-card .bn-radio {
+    [data-theme="dark"] .realtor-page .bn-hero-right > .bn-card .bn-radio {
       background: color-mix(in oklab, var(--surface) 48%, transparent);
     }
 
@@ -731,58 +723,6 @@
             </div>
           </div>
 
-          <div class="bn-card">
-            <h2 class="bn-h2">Application Form</h2>
-            <p class="bn-muted">Same form, same rules. No extra hoops.</p>
-
-            <form id="bnAffiliateForm2" class="bn-form" method="post" action="">
-              <div class="bn-field">
-                <label class="bn-label">Are you a licensed Realtor? <span class="bn-req">*</span></label>
-                <div class="bn-radio-row">
-                  <label class="bn-radio">
-                    <input type="radio" name="licensed_realtor" value="Yes" required>
-                    <span>Yes</span>
-                  </label>
-                  <label class="bn-radio">
-                    <input type="radio" name="licensed_realtor" value="No" required>
-                    <span>No</span>
-                  </label>
-                </div>
-              </div>
-
-              <div class="bn-field">
-                <label class="bn-label" for="bn_market2">Which city or area do you mainly work in? <span class="bn-req">*</span></label>
-                <input class="bn-input" id="bn_market2" name="primary_market" type="text" placeholder="Example: Miami, FL" required>
-              </div>
-
-              <div class="bn-field">
-                <label class="bn-label" for="bn_phone2">Phone Number <span class="bn-req">*</span></label>
-                <input class="bn-input" id="bn_phone2" name="phone" type="tel" placeholder="(555) 555-5555" required>
-              </div>
-
-              <div class="bn-field">
-                <label class="bn-label" for="bn_email2">Email Address <span class="bn-req">*</span></label>
-                <input class="bn-input" id="bn_email2" name="email" type="email" placeholder="name@email.com" required>
-              </div>
-
-              <input type="hidden" name="utm_source" class="bn-utm-source" value="">
-              <input type="hidden" name="utm_medium" class="bn-utm-medium" value="">
-              <input type="hidden" name="utm_campaign" class="bn-utm-campaign" value="">
-              <input type="hidden" name="utm_content" class="bn-utm-content" value="">
-              <input type="hidden" name="utm_term" class="bn-utm-term" value="">
-              <input type="hidden" name="page_url" class="bn-page-url" value="">
-
-              <button class="bn-btn bn-btn-primary bn-btn-block" type="submit">
-                Submit My Application
-              </button>
-
-              <p class="bn-consent">
-                By submitting, you agree to be contacted by BlueNest about the Realtor Affiliate Program.
-              </p>
-
-              <div class="bn-form-msg" aria-live="polite"></div>
-            </form>
-          </div>
         </div>
       </section>
     </section>
@@ -914,8 +854,7 @@
       }
 
       const forms = [
-        document.getElementById("bnAffiliateForm"),
-        document.getElementById("bnAffiliateForm2")
+        document.getElementById("bnAffiliateForm")
       ].filter(Boolean);
 
       forms.forEach((f) => {
